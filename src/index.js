@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import KidZoneApp from './KidZoneApp';
+import KidZoneApp from './Components/KidsZone/KidZoneApp';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(

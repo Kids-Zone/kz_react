@@ -6,8 +6,8 @@ const Header = props => <header class="">
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
-                    <img src="images/bee.jpg" width="30" height="30" class="d-inline-block align-top" alt=""/>
-                        Kids Zone Cooking Club</a>
+                    <img src="../../images/bee.jpg" width="30" height="30" class="d-inline-block align-top" alt=""/>
+                        Kids Zone </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>

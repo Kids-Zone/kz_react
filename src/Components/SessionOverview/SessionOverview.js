@@ -9,8 +9,8 @@ const SessionOverview = props => <div>
 
         <div class="container">
 
-            <h1>Cooking lesson this week is <small>A Christmas favourite, Apple pie.</small>
-            </h1>
+            <h2>Cooking lesson this week is <small>A Christmas favourite, Apple pie.</small>
+            </h2>
 
             <div class="row">
                 <div class="col-md-4">
@@ -37,7 +37,7 @@ const SessionOverview = props => <div>
                 <div class="col-md-4">
                     <div class="btn-toolbar">
                         <button class="btn btn-primary">Book now</button>  
-                        <button class="btn btn-info">More details</button>
+                        <button class="btn btn-info">More Activities</button>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@ const SessionOverview = props => <div>
             <div class="row">
                 <div class="col-md-3 col-sm-6 mb-3">
                     <a href="cooking.html">
-                        <img class="img-fluid" src="images/activities/cheesecakesmall.jpg" alt="cheesecake" />
+                        <img class="rounded-circle" height="100" width="100" src="../../images/cheesecakesmall.jpg" alt="cheesecake" />
                     </a>
                 </div>
             </div>

@@ -59,10 +59,19 @@ const SessionOverview = props => <div>
                     </div>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="btn-toolbar">
+                        <button class="btn btn-primary">Book now</button>  
+                        <button class="btn btn-info">More details</button>
+                    </div>
+                </div>
+            </div>
             <div class="p-4 mb-3 mt-2 bg-light rounded border border-primary">
                 <h4>A quote from Martin - aged 11</h4>
                 <p class="mb-0 font-italic">I made this for my family and they all loved it. It's so easy to follow the instructions.
-     </p>
+                </p>
             </div>
 
             <h3 class="my-4">You might be interested in next week's cooking class, it's cheesecake!</h3>

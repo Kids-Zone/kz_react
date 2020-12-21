@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      {/* <Body page='HomeScreen'/>  */}
-      <Body page='ActivityListScreen'/> 
+      <Body page='HomeScreen'/> 
+      {/* <Body page='ActivityListScreen'/>  */}
        {/* <Body page='ActivityScreen'/>  */}
       <Footer/>
     </div>

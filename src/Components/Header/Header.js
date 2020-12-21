@@ -9,7 +9,7 @@ function Header(props) {
   const [isOpen, setOpen] = useState(false);
   return (
     <header className="header">
-     <nav className="navbar ">
+     <nav class="navbar navbar-dark fixed-top bg-primary">
         <h1 className="logo">Kids Zone</h1>
         <ul className="desktop-list ">
          <li><a href="index.html" >Home</a></li>

@@ -5,15 +5,6 @@ import App from './App';
 import KidZoneApp from './Components/KidsZone/KidZoneApp';
 import reportWebVitals from './reportWebVitals';
 
-/** 
-ReactDOM.render(
-  <React.StrictMode>
-    <KidZoneApp />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-*/
-
 ReactDOM.render(
   <React.StrictMode>
     <App screenName ='HomeScreen' />

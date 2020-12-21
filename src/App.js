@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <Header/>
       {/* <Body page='HomeScreen'/>  */}
-      {/* <Body page='ActivityListScreen'/>   */}
-       <Body page='ActivityScreen'/> 
+      <Body page='ActivityListScreen'/> 
+       {/* <Body page='ActivityScreen'/>  */}
       <Footer/>
     </div>
   );

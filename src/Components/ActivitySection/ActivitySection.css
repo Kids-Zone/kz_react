@@ -1,0 +1,31 @@
+.img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: relative;
+    z-index: 1;
+    width: 300px;
+    height: 200px;
+   
+}
+
+.activity-text {
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+}
+.activity-online-img{
+    background-image: url(https://cdn.elearningindustry.com/wp-content/uploads/2017/01/social-learning-activities-perfect-fit-online-training.jpg);
+  
+}
+.activity-premise-img{
+    background-image: url(https://thumbs.dreamstime.com/z/rock-band-instruments-18172472.jpg);
+
+}
+.mentor-online-img{
+    background-image: url(https://www.mentoring.org/wp-content/uploads/2020/05/Untitled-1-09.png);
+   
+}
+.mentor-premise-img{
+    background-image: url(https://thumbs.dreamstime.com/b/mentoring-happy-young-teacher-group-kids-studio-arts-89905161.jpg);
+
+}

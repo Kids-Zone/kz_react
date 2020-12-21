@@ -1,0 +1,8 @@
+.main_section {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex : 1 1 auto;
+    max-width: 800px;
+    
+}

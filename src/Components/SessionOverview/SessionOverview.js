@@ -26,7 +26,6 @@ const SessionOverview = props => <div>
                         <li>Butter</li>
                     </ul>
                     <div class="row">
-
                         <div class="col-md-4">
                             <strong>£3.00</strong>
                         </div>
@@ -51,7 +50,7 @@ const SessionOverview = props => <div>
             <h4 class="my-4">You might be interested in next week's cooking class, it's cheesecake!</h4>
             <div>
                 <main role="main">
-                <UpcomingSessions></UpcomingSessions>
+                    <UpcomingSessions></UpcomingSessions>
                 </main>
             </div>
         </div>

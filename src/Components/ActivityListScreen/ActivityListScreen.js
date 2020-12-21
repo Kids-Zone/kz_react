@@ -1,6 +1,9 @@
-import './ActivityDetailScreen.css';
+import './ActivityListScreen.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
-function ActivityDetailScreen(props) {
+function ActivityListScreen(props) {
+
   return (
     <main>
         <div>
@@ -10,7 +13,7 @@ function ActivityDetailScreen(props) {
                     <option>Online</option>
                     <option>Premise</option>
                 </select>
-                <input id="search_activities" type="text"></input><i class="fa fa-search"></i>
+                <input className="search_activities" id="search_activities" type="text"></input><FontAwesomeIcon className="search-icon" icon={faSearch}/>
             </section>
         </div>
         <div class="activity_section ">
@@ -19,7 +22,7 @@ function ActivityDetailScreen(props) {
                 <h3>Dance </h3>
                 <h5>Days :Monday to Friday</h5>
                 <h5>Max Occupants : 10</h5>
-                <button class="button">Read More..</button>
+                <button class="button btn btn-info">Read More..</button>
                 </div>
             </section>
             <section class = "all-activity-image online-art-img">
@@ -27,15 +30,15 @@ function ActivityDetailScreen(props) {
                 <h3>Craft </h3>
                 <h5>Days :Monday to Friday</h5>
                 <h5>Max Occupants : 10</h5>
-                <button class="button">Read More..</button>
+                <button class="button btn btn-info">Read More..</button>
                 </div>
             </section> 
             <section class = "all-activity-image premise-drummer-img">
                 <div class="img-text">
-                <h3>Drming</h3>
+                <h3>Drumming</h3>
                 <h5>Days:Monday - Wednesday</h5>
                 <h5>Max Occupants : 4</h5>
-                <button class="button">Read More..</button>
+                <button class="button btn btn-info">Read More..</button>
             </div>
             </section>
             <section  class = "all-activity-image premise-cooking-img">
@@ -43,7 +46,7 @@ function ActivityDetailScreen(props) {
                 <h3>Cooking</h3>
                 <h5>Days:Tuesday - Thursday</h5>
                 <h5>Max Occupants : 6</h5>
-                <button class="button">Read More..</button>
+                <button class="button btn btn-info">Read More..</button>
                 </div>
             </section> 
         </div>
@@ -51,4 +54,4 @@ function ActivityDetailScreen(props) {
   );
 }
 
-export default ActivityDetailScreen;
+export default ActivityListScreen;

@@ -1,8 +1,8 @@
 
 import './HomeScreen.css';
-import ImageSection from '../ImageSection/ImageSection';
-import DescriptionSection from '../DescriptionSection/DescriptionSection';
-import MainSection from '../MainSection/MainSection';
+import ImageSection from './ImageSection/ImageSection';
+import DescriptionSection from './DescriptionSection/DescriptionSection';
+import MainSection from './MainSection/MainSection';
 
 function HomeScreen(props) {
   return (

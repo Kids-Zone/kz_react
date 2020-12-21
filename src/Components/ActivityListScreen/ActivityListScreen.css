@@ -11,6 +11,9 @@
     position: relative;
     font-size:10px;
     text-align: center;
+    font-weight: bold;
+    color: whitesmoke;
+    border : 1px
 }
 
 /* Activity Search Section */
@@ -21,8 +24,7 @@
     max-width : 250px;
     z-index: 1;
      /* Add the blur effect */
-  /* filter: blur(1px);
-  -webkit-filter: blur(1px); */
+
 
   /* Full height */
   height: 100%;
@@ -38,6 +40,7 @@
     position: relative; 
     text-align: center;
     max-width : 800px;
+    
 }
 .centered {
   position: absolute;
@@ -56,4 +59,12 @@
 .premise-cooking-img{
     background-image: url(http://ggevd.com/wp-content/uploads/2019/03/cooking-classes-for-kids-c700x420-QdPwiJ.jpg);
 
+}
+
+.search_activities{
+    margin-left: 2px;
+    height: 25px;
+}
+.search-icon{
+    margin-top: 2px;
 }

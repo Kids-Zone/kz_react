@@ -9,10 +9,10 @@ const UpcomingSessions = props => <div>
         </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md6">
                 <div class="btn-toolbar">
                     <button class="btn btn-primary">Book next week</button>  
-                    <button class="btn btn-info">More Cooking</button>
+                    <button class="btn btn-info">More Activities</button>
             </div>
         </div>
     </div>

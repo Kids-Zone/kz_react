@@ -1,7 +1,4 @@
 import './Header.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-
 
 function Header(props) {
  return (
@@ -11,11 +8,16 @@ function Header(props) {
         <ul className="desktop-list ">
          <li><a href="#" >Home</a></li>
          <li><a href="#" >Activities</a></li>
+         <li><a href="#" >Mentoring</a></li>
          <li><a href="#" >About</a></li>
          <li><a href="#" >Login/Register</a></li>
         </ul>
         <ul className="mobile-list ">
-         <li><FontAwesomeIcon icon={faHome}/></li>
+         <i class="fa fa-home"></i>
+         <i class="fa fa-cogs"></i>
+         <i class="fas fa-chalkboard-teacher"></i>
+         <i class="fa fa-info"></i>
+         <i class="fa fa-users"></i>
      </ul>
     </nav> 
  </header> 

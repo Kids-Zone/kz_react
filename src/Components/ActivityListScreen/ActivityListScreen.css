@@ -42,12 +42,7 @@
     max-width : 800px;
     
 }
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+
 .online-art-img{
     background-image: url(https://curiosityencouraged.com/wp-content/uploads/2018/04/homeschool-art3.jpg);
 
@@ -61,10 +56,3 @@
 
 }
 
-.search_activities{
-    margin-left: 2px;
-    height: 25px;
-}
-.search-icon{
-    margin-top: 2px;
-}

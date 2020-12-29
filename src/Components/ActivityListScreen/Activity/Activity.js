@@ -1,14 +1,19 @@
 import './Activity.css';
+import { useHistory } from 'react-router-dom';
 
 function Activity(props) {
-     
+  const history = useHistory();
   return (
     
-            <div className="col-sm-3 img-text ">
-                <h3>{props.title} </h3>
-                <h5>Days :{props.schedule}</h5>
-                <h5>Max Occupants :{props.maxcount}</h5>
-                <button className="button btn btn-info">Read More..</button>
+            <div className="col-12 col-md-4 col-xl-3 img-text">
+              <div className="card-body" style={{ width: "200px" }}>
+                <h5>{props.title} </h5>
+                <ul className="list-unstyled">
+                  <li>Days :{props.schedule}</li>
+                  <li>Max Occupants :{props.maxcount}</li>
+                </ul>
+                <button className="button btn btn-info" onClick={() => history.push('/activityChosen')}>Read More..</button>
+            </div>
             </div>
   )};
 

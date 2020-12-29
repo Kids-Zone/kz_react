@@ -1,10 +1,10 @@
 import React from "react";
+import './Class.css';
 
 const ClassCard = () => {
   return (
-    <div className="col-12 col-md-6 col-xl-3">
-      <div className="card" style={{ margin: "0px", marginTop: "11px" }}>
-        <div className="card-body" style={{ width: "245px" }}>
+    <div className="col-12 col-md-4 col-xl-3 cardtext">
+        <div className="card-body" style={{ width: "200px" }}>
           <h5 className="card-title">English Writing</h5>
           <ul className="list-unstyled">
             <li>Date : 02/01/2021</li>
@@ -16,7 +16,7 @@ const ClassCard = () => {
           </button>
         </div>
       </div>
-    </div>
+  
   );
 };
 

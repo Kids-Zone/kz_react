@@ -1,12 +1,12 @@
 
 import './MainSection.css';
-import ActivitySection from '../ActivitySection/ActivitySection'
+import Offering from '../Offering/Offering'
 
 function MainSection(props) {
   return (
     <div className="main_section"> 
-    <ActivitySection category="online" type={props.type}/>
-    <ActivitySection category="premise" type={props.type}/>
+    <Offering category="online" type={props.type}/>
+    <Offering category="premise" type={props.type}/>
     </div>
         
   );

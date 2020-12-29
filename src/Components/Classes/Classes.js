@@ -5,12 +5,12 @@ export const Classes = () => {
     <>
       <div className="row">
         <div className="col">
-          <h3 className="text-center" style={{ marginTop: "20px" }}>
+          <h3 className="text-center" style={{ marginTop: "10px" }}>
             Week Starting 01/01/2021
           </h3>
         </div>
       </div>
-      <div style={{ marginTop: "10px" }}>
+      <div style={{ marginTop: "5px" }}>
         <div className="container">
           <div className="row mb-3">
             <ClassCard />

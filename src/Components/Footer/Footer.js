@@ -1,14 +1,29 @@
+import "./Footer.css";
+import { FontAwesomeIcon, fab } from "@fortawesome/react-fontawesome";
 
-import './Footer.css';
-
-
-function Footer(props) {
+function Footer() {
   return (
-   
-    <div class="footer">
-      Made with ♥ by Kids Zone Team
+    <div className="footer-dark" style={{ height: "90px", padding: "16px" }}>
+      <footer>
+        <div className="container">
+          <div className="col item social">
+            <a href="#">
+              <FontAwesomeIcon icon={["fab", "facebook"]} size="lg" />
+            </a>
+            <a href="#">
+              <FontAwesomeIcon icon={["fab", "twitter"]} size="lg" />
+            </a>
+            <a href="#">
+              <FontAwesomeIcon icon={["fab", "snapchat"]} size="lg" />
+            </a>
+            <a href="#">
+              <FontAwesomeIcon icon={["fab", "instagram"]} size="lg" />
+            </a>
+          </div>
+          <p className="copyright">KidsZone © 2020</p>
+        </div>
+      </footer>
     </div>
-  
   );
 }
 

@@ -6,12 +6,11 @@ const Availability = () => {
     <>
       <div className="row">
         <div className="col">
-          <h3 className="text-center" style={{ marginTop: "20px" }}>
+          <h3 className="text-center" style={{ marginTop: "10px" }}>
             My Planner
           </h3>
         </div>
       </div>
-      <div style={{ marginTop: "10px" }}></div>
       <div style={{ marginTtop: "10px" }}>
         <div className="container" style={{ marginBottom: "11px" }}>
           <div className="mt-5 mb-5">

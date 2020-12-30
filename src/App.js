@@ -20,8 +20,17 @@ function App() {
           />
           <Route path="/classes" exact component={Classes} />
           <Route path="/availability" exact component={Availability} />
-          {/* <Body page='ActivityListScreen'/>  */}
-          {/* <Body page='ActivityScreen'/>  */}
+          <Route
+          path="/activityList"
+          exact
+          render={(props) => <Body {...props} page="ActivityListScreen" />}
+          />
+          <Route
+          path="/activityChosen"
+          exact
+          render={(props) => <Body {...props} page="ActivityScreen" />}
+          />
+         
         </Switch>
       </Router>
       <Footer />

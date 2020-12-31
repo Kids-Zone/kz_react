@@ -6,6 +6,10 @@ main {
     background: url('../../images/cooking-baking.jpg') no-repeat fixed;
 }
 
+.jumbotron-detail-drumming{
+    background: url('../../images/drumming.jpg') no-repeat fixed;
+}
+
 .jumbotron{
     box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.1);
     height: 30vh;

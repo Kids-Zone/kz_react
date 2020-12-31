@@ -2,8 +2,8 @@ main {
     margin-top: 80px;
 }
 
-.jumbotron-detail-apple-pie{
-    background: url('../../images/applepie.jpg') no-repeat fixed;
+.jumbotron-detail-cooking-and-baking{
+    background: url('../../images/cooking-baking.jpg') no-repeat fixed;
 }
 
 .jumbotron{
@@ -14,4 +14,3 @@ main {
 
  .btn{margin:10px}
 
- .btn{margin:10px}

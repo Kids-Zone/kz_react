@@ -1,6 +1,21 @@
 .btn{margin:10px}
 
-.ingredients{
-
-    list-style : none;
+.jumbotron-detail-cooking{
+    background: url('../../images/cooking.jpg') no-repeat fixed;
 }
+
+.jumbotron-detail-drumming{
+    background: url('../../images/drumming.jpg') no-repeat fixed;
+}
+
+.jumbotron-detail-dance{
+    background: url('../../images/dance.jpg') no-repeat fixed;
+}
+
+.jumbotron{
+    box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.1);
+    height: 30vh;
+    background-size: cover;
+ }
+
+ .btn{margin:10px}

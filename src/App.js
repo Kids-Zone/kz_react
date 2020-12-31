@@ -6,6 +6,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Classes } from "./Components/Classes/Classes";
 import Availability from "./Components/Availability/Availability";
+import SessionOverviewDance from "./Components/SessionOverview/SessionOverviewDance";
+import SessionOverviewDrum from "./Components/SessionOverview/SessionOverviewDrum";
 
 function App() {
   return (
@@ -20,17 +22,9 @@ function App() {
           />
           <Route path="/classes" exact component={Classes} />
           <Route path="/availability" exact component={Availability} />
-          <Route
-          path="/activityList"
-          exact
-          render={(props) => <Body {...props} page="ActivityListScreen" />}
-          />
-          <Route
-          path="/activityChosen"
-          exact
-          render={(props) => <Body {...props} page="ActivityScreen" />}
-          />
-         
+          <Route path="/activities" exact render={(props) => <Body {...props} page="ActivityListScreen" />} />         
+          <Route exact path="/activities/dance" component={SessionOverviewDance} />
+          <Route exact path="/activities/drum" component={SessionOverviewDrum} />
         </Switch>
       </Router>
       <Footer />

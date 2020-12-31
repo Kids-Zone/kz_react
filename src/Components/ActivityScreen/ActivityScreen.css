@@ -10,6 +10,10 @@ main {
     background: url('../../images/drumming.jpg') no-repeat fixed;
 }
 
+.jumbotron-detail-dance{
+    background: url('../../images/dance.jpg') no-repeat fixed;
+}
+
 .jumbotron{
     box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.1);
     height: 30vh;

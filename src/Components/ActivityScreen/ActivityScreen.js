@@ -1,12 +1,13 @@
 import './ActivityScreen.css'
 import '../SessionOverview/SessionOverview.css'
 import SessionOverview from '../SessionOverview/SessionOverview.js'
-import SessionOverviewdrum from '../SessionOverview/SessionOverviewdrum.js'
+import SessionOverviewDrum from '../SessionOverview/SessionOverviewDrum.js'
+import SessionOverviewDance from '../SessionOverview/SessionOverviewDance.js'
 
 const ActivityScreen = props => <div>
  
     <main role="main">
-       <SessionOverviewdrum></SessionOverviewdrum>
+       <SessionOverviewDance></SessionOverviewDance>
     </main>
 </div>
 

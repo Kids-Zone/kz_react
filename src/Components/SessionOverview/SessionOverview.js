@@ -3,7 +3,7 @@ import UpcomingSessions from "../UpcomingSessions/UpcomingSessions.js";
 
 const SessionOverview = (props) => (
   <div>
-    <div class="jumbotron jumbotron-detail-drumming container-fluid">
+    <div class="jumbotron jumbotron-detail-cooking container-fluid">
       <div class="container">
         <h1 class="display-3 text-white">Cooking and Baking</h1>
       </div>

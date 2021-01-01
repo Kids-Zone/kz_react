@@ -10,6 +10,7 @@ import SessionOverviewDrum from "./Components/SessionOverview/SessionOverviewDru
 import ActivityListScreen from "./Components/ActivityListScreen/ActivityListScreen";
 import HomeScreen from "./Components/HomeScreen/HomeScreen";
 import SessionOverview from "./Components/SessionOverview/SessionOverview";
+import About from "./Components/About/About";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route exact path="/activities/cooking" component={SessionOverview} />         
           <Route exact path="/activities/dance" component={SessionOverviewDance} />
           <Route exact path="/activities/drumming" component={SessionOverviewDrum} />
+          <Route exact path="/about" component={About} />
         </Switch>
       </Router>
       <Footer />

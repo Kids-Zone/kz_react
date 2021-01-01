@@ -25,13 +25,9 @@ const Header = () => {
         <Nav.Link componentClass={Link}  href="/">
             Home
         </Nav.Link>
-<<<<<<< HEAD
-        <Nav.Link componentClass={Link} href="/activityList"  >
-=======
-        <Nav.Link componentClass={Link} href="/activities" to={ {state: { params:'' }}} >
->>>>>>> origin/main
+        <Nav.Link componentClass={Link} href="/activities">
             Activities
-        </Nav.Link>
+          </Nav.Link>
           <NavDropdown
             className="nav-dropdown"
             title="Mentoring"

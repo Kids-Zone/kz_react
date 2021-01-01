@@ -3,43 +3,27 @@ import UpcomingSessions from "../UpcomingSessions/UpcomingSessions.js";
 
 const SessionOverview = (props) => (
   <div>
-    <div class="jumbotron jumbotron-detail-apple-pie container-fluid">
+    <div class="jumbotron jumbotron-detail-cooking container-fluid">
       <div class="container">
-        <h1 class="display-3 text-white">Apple pie</h1>
+        <h1 class="display-3 text-white">Cooking and Baking</h1>
       </div>
     </div>
 
     <div class="container">
       <h2>
         Cooking lesson this week is{" "}
-        <small>A Christmas favourite, Apple pie.</small>
+        <small>everyone's favourite Apple pie.</small>
       </h2>
-
       <div class="row">
-        <div class="col-md-4">
-          <h3 class="my-3">About this pie</h3>
-          <p>Perfect for Christmas day or as a gift.</p>
-          <h3 class="my-3">Ingredients</h3>
-          <ul>
-            <li>Apple</li>
-            <li>Sugar</li>
-            <li>Eggs</li>
-            <li>Milk</li>
-            <li>Butter</li>
-          </ul>
-          <div class="row">
-            <div class="col">
-              <strong>£3.00</strong>
-            </div>
-          </div>
-        </div>
+        <p>Everything you need for the lesson you need will be provided in class. </p>
       </div>
-
       <div class="row">
+        <p>If you are following from home, a click the recipe for more details.</p>
+      </div>      <div class="row">
         <div class="col-md6">
           <div class="btn-toolbar">
             <button class="btn btn-primary">Book now</button>
-            <button class="btn btn-info">More Activities</button>
+            <button class="btn btn-info">Recipe</button>
           </div>
         </div>
       </div>
@@ -52,7 +36,7 @@ const SessionOverview = (props) => (
       </div>
 
       <h4 class="my-4">
-        You might be interested in next week's cooking class, it's cheesecake!
+        You might be interested in next week's cooking class.
       </h4>
       <div>
         <div>

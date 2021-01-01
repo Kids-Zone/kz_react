@@ -1,5 +1,5 @@
 import './Activity.css';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 function Activity(props) {
   const history = useHistory();
@@ -12,7 +12,12 @@ function Activity(props) {
                   <li>Days :{props.schedule}</li>
                   <li>Max Occupants :{props.maxcount}</li>
                 </ul>
-                <button className="button btn btn-info" onClick={() => history.push('/activityChosen')}>Read More..</button>
+                <Link to={`/activities/${props.title}`}>
+                <button className="button btn btn-info">Read More about {props.title}</button>
+                </Link>
+                
+                
+                <Link to="/activityList"/>
             </div>
             </div>
   )};

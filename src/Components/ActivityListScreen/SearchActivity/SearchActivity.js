@@ -13,7 +13,7 @@ function SearchActivity(props) {
                     <option>Online</option>
                     <option>Premise</option>
                 </select>
-                <input className="search_activities" id="search_activities" type="text"></input><FontAwesomeIcon className="search-icon" icon={faSearch}/>
+                <input className="search_activities" id="search_activities" type="text"></input><button className="button btn btn-info search-button">Search</button>
             </section>
         </div>
   )};

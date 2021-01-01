@@ -1,13 +1,12 @@
 .image_section{ 
     position: relative; 
     text-align: center;
-    margin-top: 5px;
     margin-bottom: 5px;
 }
 
 .AppImage{
   
-    width: 70%;
+    width: 80%;
 }
 
 /* Top right text */

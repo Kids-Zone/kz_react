@@ -1,6 +1,6 @@
 
 import './Offering.css';
-import { useHistory } from 'react-router-dom';
+import { Link,useHistory } from 'react-router-dom';
 
 function Offering(props) {
    const history = useHistory();
@@ -18,8 +18,16 @@ function Offering(props) {
                {category === 'premise' && type === 'activity' && <h4>Premise Activities</h4>}
                {category === 'online' && type === 'mentoring' && <h4>Online Mentoring</h4>}
                {category === 'premise' && type === 'mentoring' && <h4>Premise Mentoring</h4>}
-           { type === 'activity' && <button className="button btn btn-info" onClick={() => history.push('/activities' , { params:category })}>View</button>}
-           { type === 'mentoring' && <button className="button btn btn-info" onClick={() => history.push('/classes', { params:category }) }>View</button>}
+           { type === 'activity' && 
+            <Link to={`/activities`}>
+           <button className="button btn btn-info" >View</button>
+           </Link>
+           }
+           { type === 'mentoring' && 
+            <Link to={`/classes`}>
+           <button className="button btn btn-info" >View</button>
+           </Link>
+           }
             </div>
         </section> 
   );

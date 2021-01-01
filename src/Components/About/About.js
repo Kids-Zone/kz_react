@@ -28,12 +28,12 @@ function About() {
        
         <div className="row activity_section">
        
-            <div className="col-12 col-md-4 col-xl-3  img-text online-dance-img">
-            <button className="button btn btn-info" onClick={() => history.push('/activityList')}>Read More..</button>
+            <div className="col-md6  img-text online-dance-img">
+            <button className="button btn btn-info" onClick={() => history.push('/activities')}>Read More..</button>
             </div>
       
-            <div className="col-12 col-md-4 col-xl-3 img-text premise-drummer-img">
-            <button className="button btn btn-info" onClick={() => history.push('/activityList')}>Read More..</button>
+            <div className="col-md6 img-text premise-drummer-img">
+            <button className="button btn btn-info" onClick={() => history.push('/activities')}>Read More..</button>
             </div>
       
         </div>
@@ -50,7 +50,7 @@ function About() {
 
         <div className="row activity_section">
        
-              <div className="col-12 col-md-4 col-xl-3 mentor-img">
+              <div className="col-12 img-text mentor-img">
               <button className="button btn btn-info" onClick={() => history.push('/classes')}>Read More..</button>
               </div>
  

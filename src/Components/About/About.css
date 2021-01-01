@@ -31,8 +31,8 @@ font-weight: bold;
 }
 
 .img-text{
-    max-width : 400px;
-    height: 200px;
+    max-width : 500px;
+  
     display: flex;
     flex-wrap: wrap;
     flex : 1 1 auto;
@@ -42,14 +42,24 @@ font-weight: bold;
 .online-dance-img{
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHJcXUdS7y0M4dyPDQoQr3TZCaEU9roFUj6w&usqp=CAU);
    
+    margin-right :10px;
+    height: 200px;
 }
 
 .premise-drummer-img{
     background-image: url(https://fonzibadrums.com/images/home1.jpg);
-   
+    margin-left :10px;
+    height: 200px;
 }
 
 .mentor-img{
-    background-image: url(https://image.shutterstock.com/image-vector/mentoring-chart-keywords-icons-sketch-600w-374733457.jpg);
-  
+    background-image: url(https://image.shutterstock.com/image-illustration/mentoring-business-concept-600w-183254327.jpg);
+  margin-bottom: 100 px;
+  height: 200px;
+}
+
+.activity_section{
+    padding :2px;
+    margin-left :200px;
+    margin-right :200px;
 }

@@ -1,9 +1,10 @@
 import "./ActivityListScreen.css";
-import { useState } from "react";
+import { useParams,useState } from "react";
 import SearchActivity from "./SearchActivity/SearchActivity";
 import Activity from "./Activity/Activity";
 
 function ActivityListScreen() {
+  let  category= 'all';
   const [activityArray, setActivity] = useState([
     {
       title: "Dance",
@@ -48,10 +49,12 @@ function ActivityListScreen() {
       id: "6",
     },
   ]);
-  const OnlineActivities = activityArray.filter(
+
+  
+  const onlineActivities = activityArray.filter(
     (activity) => activity.category === "online"
   );
-  const PremiseActivities = activityArray.filter(
+  const premiseActivities = activityArray.filter(
     (activity) => activity.category === "premise"
   );
 
@@ -59,14 +62,33 @@ function ActivityListScreen() {
     <main className="container">
       <SearchActivity />
       <div className="row">
-        {activityArray.map((activity) => (
+        {
+       category === 'online' ?
+        
+        onlineActivities.map((activity) => (
           <Activity
             key={activity.id}
             title={activity.title}
             schedule={activity.schedule}
             maxcount={activity.maxcount}
-          />
-        ))}
+          />)) :
+          category  === 'premise' ?
+          premiseActivities.map((activity) => (
+            <Activity
+              key={activity.id}
+              title={activity.title}
+              schedule={activity.schedule}
+              maxcount={activity.maxcount}
+            />)) :
+
+            activityArray.map((activity) => (
+              <Activity
+                key={activity.id}
+                title={activity.title}
+                schedule={activity.schedule}
+                maxcount={activity.maxcount}
+              />))
+      }
       </div>
     </main>
   );

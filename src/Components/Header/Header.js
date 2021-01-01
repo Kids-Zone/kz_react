@@ -21,13 +21,13 @@ const Header = () => {
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="ml-auto">
+        <Nav className="">
         <Nav.Link componentClass={Link}  href="/">
             Home
         </Nav.Link>
-        <Nav.Link componentClass={Link} href="/activities" to={ {state: { params:'' }}} >
+        <Nav.Link componentClass={Link} href="/activities">
             Activities
-        </Nav.Link>
+          </Nav.Link>
           <NavDropdown
             className="nav-dropdown"
             title="Mentoring"
@@ -51,7 +51,7 @@ const Header = () => {
               Availability
             </NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link componentClass={Link} href="#">
+          <Nav.Link componentClass={Link} href="/about">
             About
           </Nav.Link>
           <Nav.Link componentClass={Link} href="#">

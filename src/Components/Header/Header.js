@@ -22,10 +22,10 @@ const Header = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
-        <Nav.Link componentClass={Link}  href="/">
+          <Nav.Link componentClass={Link} href="/">
             Home
-        </Nav.Link>
-        <Nav.Link componentClass={Link} href="/activities">
+          </Nav.Link>
+          <Nav.Link componentClass={Link} href="/activities">
             Activities
           </Nav.Link>
           <NavDropdown
@@ -33,23 +33,40 @@ const Header = () => {
             title="Mentoring"
             id="collasible-nav-dropdown"
           >
-    
             {/* <NavDropdown.Item href="#">Classes</NavDropdown.Item> */}
+
             <NavDropdown.Item
+              componentClass={Link}
+              href="/teaching"
+              to="/teaching"
+            >
+              Teaching
+            </NavDropdown.Item>
+
+            <NavDropdown.Item
+              componentClass={Link}
+              href="/register"
+              to="/register"
+            >
+              Sign Up
+            </NavDropdown.Item>
+            {/*
+            <NavDropdown.Divider />
+             <NavDropdown.Item
               componentClass={Link}
               href="/classes"
               to="/classes"
             >
               Classes
-            </NavDropdown.Item>
-            <NavDropdown.Divider />
+            </NavDropdown.Item> 
+             <NavDropdown.Divider />
             <NavDropdown.Item
               componentClass={Link}
               href="/availability"
               to="/availability"
             >
               Availability
-            </NavDropdown.Item>
+            </NavDropdown.Item> */}
           </NavDropdown>
           <Nav.Link componentClass={Link} href="/about">
             About

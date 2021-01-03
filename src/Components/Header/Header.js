@@ -28,28 +28,31 @@ const Header = () => {
           <Nav.Link componentClass={Link} href="/activities">
             Activities
           </Nav.Link>
-          <NavDropdown
+          <Nav.Link componentClass={Link} href="/teaching">
+            Mentoring
+          </Nav.Link>
+          {/* <NavDropdown
             className="nav-dropdown"
             title="Mentoring"
             id="collasible-nav-dropdown"
-          >
+          > */}
             {/* <NavDropdown.Item href="#">Classes</NavDropdown.Item> */}
 
-            <NavDropdown.Item
+            {/* <NavDropdown.Item
               componentClass={Link}
               href="/teaching"
               to="/teaching"
             >
               Teaching
-            </NavDropdown.Item>
+            </NavDropdown.Item> */}
 
-            <NavDropdown.Item
+            {/* <NavDropdown.Item
               componentClass={Link}
               href="/register"
               to="/register"
             >
               Sign Up
-            </NavDropdown.Item>
+            </NavDropdown.Item> */}
             {/*
             <NavDropdown.Divider />
              <NavDropdown.Item
@@ -67,12 +70,12 @@ const Header = () => {
             >
               Availability
             </NavDropdown.Item> */}
-          </NavDropdown>
+          {/* </NavDropdown> */}
           <Nav.Link componentClass={Link} href="/about">
             About
           </Nav.Link>
-          <Nav.Link componentClass={Link} href="#">
-            Login/Register
+          <Nav.Link componentClass={Link} href="/register">
+            SignUp
             {/* <FontAwesomeIcon icon={["fas", "sign-out-alt"]} fixedWidth /> */}
           </Nav.Link>
         </Nav>

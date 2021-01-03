@@ -25,7 +25,7 @@ const Teaching = () => {
 
           <p>
             All teachers will be satisfied with our club educational
-            environemtn, and most of our teacher gorw their skill by teaching
+            environment, and most of our teacher grow their skill by teaching
             our club kids.
           </p>
         </Jumbotron>

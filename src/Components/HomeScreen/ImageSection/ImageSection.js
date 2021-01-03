@@ -12,7 +12,7 @@ function ImageSection(props) {
 
 <div class="jumbotron jumbotron-app container-fluid">
 <div class="container">
-  <h1 class="display-3 text-white">8-15 Yrs</h1>
+  {/* <h1 class="display-3 text-white">8-15 Yrs</h1> */}
 </div>
 </div>
   );

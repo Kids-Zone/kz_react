@@ -1,5 +1,6 @@
 import "./SessionOverview.css";
 import UpcomingSessions from "../UpcomingSessions/UpcomingSessions.js";
+import { Link, useHistory } from 'react-router-dom';
 
 const SessionOverview = (props) => (
   <div>
@@ -11,20 +12,22 @@ const SessionOverview = (props) => (
 
     <div class="container">
       <h2>
-        Cooking lesson this week is{" "}
-        <small>everyone's favourite Apple pie.</small>
+        Cooking and Baking
+        <small> whatever we're making it'll always taste wonderful!</small>
       </h2>
       <div class="row">
-        <p>Everything you need for the lesson you need will be provided in class. </p>
+        <p>
+          Our cookery and baking courses are specifically designed to inspire and engage. 
+          Everyone always leaves inspired after having a great time in the kitchen under the amiable supervision of our chefs.
+          </p>
+         <p> Everything you need for the lesson you need will be provided in class. </p>
       </div>
-      <div class="row">
-        <p>If you are following from home, a click the recipe for more details.</p>
-      </div>      <div class="row">
+     <div class="row">
         <div class="col-md6">
-          <div class="btn-toolbar">
             <button class="btn btn-primary">Book now</button>
-            <button class="btn btn-info">Recipe</button>
-          </div>
+            <Link to={`/activities`}>
+              <button class="btn btn-info">More Activites</button>
+            </Link>
         </div>
       </div>
       <div class="p-4 mb-3 mt-2 bg-light rounded border border-primary">

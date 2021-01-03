@@ -1,5 +1,6 @@
 import "./SessionOverview.css";
 import UpcomingSessions from "../UpcomingSessions/UpcomingSessions.js";
+import { Link, useHistory } from 'react-router-dom';
 
 const SessionOverviewDrum = (props) => (
   <div>
@@ -11,18 +12,20 @@ const SessionOverviewDrum = (props) => (
 
     <div class="container">
       <h2>
-        Lesson this week is{" "}
-        <small>focusing on reading sheet music</small>
+        Enjoy drumming and make some noise! 
+        <small> Whether you're a beginner or want to improve your technique all abilities are welcome.</small>
       </h2>
       <div class="row">
-        <p>Everything you need for the lesson you need will be provided in class. </p>
+        <p>
+           We’re so proud to have a fantastic team of drum teachers. We cover all styles from rock and pop to blues and funk.</p>
+           <p> Everything you need for the lesson you need will be provided in class.  </p>
       </div>
       <div class="row">
         <div class="col-md6">
-          <div class="btn-toolbar">
             <button class="btn btn-primary">Book now</button>
-            <button class="btn btn-info">Book Next Lesson</button>
-          </div>
+            <Link to={`/activities`}>
+              <button class="btn btn-info">More Activites</button>
+            </Link>
         </div>
       </div>
       <div class="p-4 mb-3 mt-2 bg-light rounded border border-primary">

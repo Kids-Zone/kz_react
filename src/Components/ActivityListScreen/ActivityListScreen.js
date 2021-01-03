@@ -1,10 +1,10 @@
 import "./ActivityListScreen.css";
-import { useParams,useState } from "react";
+import { useState } from "react";
 import SearchActivity from "./SearchActivity/SearchActivity";
 import Activity from "./Activity/Activity";
 
-function ActivityListScreen() {
-  let  category= 'all';
+function ActivityListScreen(props) {
+  const category = props.category;
   const [activityArray, setActivity] = useState([
     {
       title: "Dance",
@@ -63,7 +63,7 @@ function ActivityListScreen() {
       <SearchActivity />
       <div className="row">
         {
-       category === 'online' ?
+        category === "online" ?
         
         onlineActivities.map((activity) => (
           <Activity
@@ -72,7 +72,7 @@ function ActivityListScreen() {
             schedule={activity.schedule}
             maxcount={activity.maxcount}
           />)) :
-          category  === 'premise' ?
+          category === "premise" ?
           premiseActivities.map((activity) => (
             <Activity
               key={activity.id}

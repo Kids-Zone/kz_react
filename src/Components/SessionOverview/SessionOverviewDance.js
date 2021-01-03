@@ -1,5 +1,6 @@
 import "./SessionOverview.css";
 import UpcomingSessions from "../UpcomingSessions/UpcomingSessions.js";
+import { Link, useHistory } from 'react-router-dom';
 
 const SessionOverviewDrum = (props) => (
   <div>
@@ -15,20 +16,21 @@ const SessionOverviewDrum = (props) => (
         <small> over the course you will work on street dance foundation steps</small>
       </h2>
       <div class="row">
-        <p>Everything you need for the lesson you need will be provided in class. </p>
+        <p>Our students perform regularly at events across Manchester it's a great experience. 
+           Once you join, you will always want to be a part of our dance family.</p>
       </div>
       <div class="row">
         <div class="col-md6">
-          <div class="btn-toolbar">
             <button class="btn btn-primary">Book now</button>
-            <button class="btn btn-info">Book Next Lesson</button>
-          </div>
+            <Link to={`/activities`}>
+              <button class="btn btn-info">More Activites</button>
+            </Link>
         </div>
       </div>
       <div class="p-4 mb-3 mt-2 bg-light rounded border border-primary">
         <h4>A quote from Mike - aged 15</h4>
         <p class="mb-0 font-italic">
-          I recommend this dance class to anyone, it's a great way to chill out and learn a new skill.
+          I recommend this dance class to anyone, it's a great way to get fit and learn a new skill.
         </p>
       </div>
     </div>

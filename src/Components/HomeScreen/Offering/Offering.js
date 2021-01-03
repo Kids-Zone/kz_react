@@ -24,7 +24,7 @@ function Offering(props) {
            </Link>
            }
            { type === 'mentoring' && 
-            <Link to={`/classes`}>
+            <Link to={`/teaching`}>
            <button className="button btn btn-info" >View</button>
            </Link>
            }

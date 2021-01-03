@@ -14,18 +14,24 @@ function About() {
         <div className ="content">
            
          <p>KidsZone is a platform where you can learn something new everyday in a safe 
-            environment. It is a educational and engaging website for children that fall in age group of 8-15 yrs.It is a place
+            environment. It is a educational and engaging club for children that fall in age group of 8-15 yrs. It is a place
             where you can find a mentor or become one. </p>
           </div>
+          <div className ="banner">
+          <h3>As we are currently in tier 4 all classes where possible are now offered online.</h3>
+          <p>Please login and see what's available, you can still sign up for new classes. </p>   
+        </div>
         <div className ="banner">
             <h3>What we offer</h3>
         </div>
         <div className ="content">
-          <p>We offer engagement in two categories.One is online while there are few that can be availed on premise.
-            All these engagement has a maximum occupancy limit based on its category and available resources. </p>
+          <p> We've a great space for you to enjoy you can drop in and have chat with friends, listen to some music in the communal area.
+              There's also table tennis and pool tables with no booking required.
+              We've lots of classes to join, if you can't make it to the club there's also range of activities available online.
+              Please drop in and see what we have to offer!</p>
                
         </div>
-       
+
         <div className="row activity_section">
        
             <div className="col-md6  img-text online-dance-img">
@@ -42,9 +48,11 @@ function About() {
         </div>
         <div className ="content">
            
-            <p>If you wish to be a mentor than we offer engagement in two categories.One is online while there are few where you can mentor on premise.
-            All these engagement has a maximum occupancy limit based on its category and available resources.You can plan the activities based on your schedule and publish same.
-            Also you can have a look at the bookings for your planner.</p>
+            <p>If you wish to be a mentor then we can offer many opportunities. Either online teaching or mentoring at the club. Some classes as you know
+                work better in person! All our teachers are CRB/DBS checked and fully qualified in their field. </p>
+            <p>
+            All classes have a maximum occupancy limit based on category and available resources. 
+            You can plan the activities based on your schedule and publish availability.</p>
                
         </div>
 

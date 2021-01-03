@@ -12,9 +12,16 @@ function Activity(props) {
                   <li>Days :{props.schedule}</li>
                   <li>Max Occupants :{props.maxcount}</li>
                 </ul>
-                <Link to={`/activities/${props.title}`}>
-                <button className="button btn btn-info">Read More about {props.title}</button>
+                {
+                  props.title === 'Craft' || props.title === 'Reading' || props.title === 'Writing' ?
+                  <button className="button btn btn-info" disabled>Upcoming</button> :
+                  <Link to={`/activities/${props.title}`}>
+                <button className="button btn btn-info">Read More</button>
                 </Link>
+
+
+                }
+                
                 
                 
                 <Link to="/activityList"/>

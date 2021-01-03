@@ -18,8 +18,8 @@ function About() {
             where you can find a mentor or become one. </p>
           </div>
           <div className ="banner">
-          <h3>As we are currently in tier 4 all classes where possible are now offered online.</h3>
-          <p>Please login and see what's available, you can still sign up for new classes. </p>   
+          <h4>As we are currently in tier 4 all classes where possible are now offered online.</h4>
+          <p>Please view this space for updates and see what's available, sign up facility will be provided shortly. </p>   
         </div>
         <div className ="banner">
             <h3>What we offer</h3>

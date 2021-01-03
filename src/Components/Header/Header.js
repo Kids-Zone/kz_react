@@ -16,7 +16,7 @@ const Header = () => {
       expand="lg"
       variant="dark"
     >
-      <Navbar.Brand componentClass={Link} href="/" to="/">
+      <Navbar.Brand className="logo" componentClass={Link} href="/" to="/">
         KiDsZoNe
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />

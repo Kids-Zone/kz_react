@@ -11,7 +11,7 @@ function ActivityListScreen(props) {
       schedule: "Monday to Friday",
       maxcount: 10,
       category: "online",
-      id: "1",
+      id: "dance",
     },
     {
       title: "Craft",
@@ -25,14 +25,14 @@ function ActivityListScreen(props) {
       schedule: "Monday & Wednesday",
       maxcount: 4,
       category: "premise",
-      id: "3",
+      id: "drumming",
     },
     {
       title: "Cooking",
       schedule: "Tuesday & Thursday",
       maxcount: 6,
       category: "premise",
-      id: "4",
+      id: "cooking",
     },
     {
       title: "Writing",
@@ -67,7 +67,7 @@ function ActivityListScreen(props) {
         
         onlineActivities.map((activity) => (
           <Activity
-            key={activity.id}
+            id={activity.id}
             title={activity.title}
             schedule={activity.schedule}
             maxcount={activity.maxcount}
@@ -75,7 +75,7 @@ function ActivityListScreen(props) {
           category === "premise" ?
           premiseActivities.map((activity) => (
             <Activity
-              key={activity.id}
+            id={activity.id}
               title={activity.title}
               schedule={activity.schedule}
               maxcount={activity.maxcount}
@@ -83,7 +83,7 @@ function ActivityListScreen(props) {
 
             activityArray.map((activity) => (
               <Activity
-                key={activity.id}
+              id={activity.id}
                 title={activity.title}
                 schedule={activity.schedule}
                 maxcount={activity.maxcount}

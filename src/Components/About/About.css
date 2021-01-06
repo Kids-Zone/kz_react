@@ -1,65 +1,60 @@
-
-.banner{
-    /* background-color :rgb(196, 180, 37); */
-    background-color: rgba(170, 211, 21, 0.993);
+.banner {
+  /* background-color :rgb(196, 180, 37); */
+  background-color: rgba(170, 211, 21, 0.993);
 }
 
-.content{ 
-    
-    text-align: left;
+.content {
+  text-align: left;
 }
 
-
-
-.image_section{ 
-    position: relative; 
-    text-align: center;
-    margin-bottom: 5px;
+.image_section {
+  position: relative;
+  text-align: center;
+  margin-bottom: 5px;
 }
 
-.AppImage{
-  
-    width: 80%;
+.AppImage {
+  width: 80%;
 }
 
 /* Top right text */
 .image_section--top-right {
-position: absolute;
-top: 10px;
-right: 140px;
-font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 140px;
+  font-weight: bold;
 }
 
-.img-text{
-    max-width : 500px;
-  
-    display: flex;
-    flex-wrap: wrap;
-    flex : 1 1 auto;
-    border: 1px;
+.img-text {
+  max-width: 500px;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  border: 1px;
 }
 
-.online-dance-img{
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHJcXUdS7y0M4dyPDQoQr3TZCaEU9roFUj6w&usqp=CAU);
-   
-    margin-right :10px;
-    height: 200px;
+.online-dance-img {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHJcXUdS7y0M4dyPDQoQr3TZCaEU9roFUj6w&usqp=CAU);
+
+  margin-right: 10px;
+  height: 200px;
 }
 
-.premise-drummer-img{
-    background-image: url(https://fonzibadrums.com/images/home1.jpg);
-    margin-left :10px;
-    height: 200px;
+.premise-drummer-img {
+  background-image: url(https://fonzibadrums.com/images/home1.jpg);
+  margin-left: 10px;
+  height: 200px;
 }
 
-.mentor-img{
-    background-image: url(https://image.shutterstock.com/image-illustration/mentoring-business-concept-600w-183254327.jpg);
+.mentor-img {
+  background-image: url(https://image.shutterstock.com/image-illustration/mentoring-business-concept-600w-183254327.jpg);
   margin-bottom: 100 px;
   height: 200px;
 }
 
-.activity_section{
-    padding :2px;
-    margin-left :200px;
-    margin-right :200px;
+.activity_section {
+  padding: 2px;
+  margin-left: 200px;
+  margin-right: 200px;
 }

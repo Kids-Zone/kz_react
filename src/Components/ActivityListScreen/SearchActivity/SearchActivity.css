@@ -1,24 +1,22 @@
-.Search_section{
-    padding: 0px;
+.Search_section {
+  padding: 0px;
 }
 
-.category{
-    padding: 1px;
+.category {
+  padding: 1px;
 }
 
-.search_activities{
-    margin-left: 2px;
-    height: 25px;
+.search_activities {
+  margin-left: 2px;
+  height: 25px;
 }
-.search-icon{
-    margin-left: 5px;
-    margin-top: 20px;
-    
-}
-
-.search-button{
-    padding :2px;
-    width : 70px;
-    height: 50px;
+.search-icon {
+  margin-left: 5px;
+  margin-top: 20px;
 }
 
+.search-button {
+  padding: 2px;
+  width: 70px;
+  height: 50px;
+}

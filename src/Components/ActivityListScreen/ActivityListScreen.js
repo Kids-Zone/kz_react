@@ -50,7 +50,6 @@ function ActivityListScreen(props) {
     },
   ]);
 
-  
   const onlineActivities = activityArray.filter(
     (activity) => activity.category === "online"
   );
@@ -62,33 +61,32 @@ function ActivityListScreen(props) {
     <main className="container">
       <SearchActivity />
       <div className="row">
-        {
-        category === "online" ?
-        
-        onlineActivities.map((activity) => (
-          <Activity
-            id={activity.id}
-            title={activity.title}
-            schedule={activity.schedule}
-            maxcount={activity.maxcount}
-          />)) :
-          category === "premise" ?
-          premiseActivities.map((activity) => (
-            <Activity
-            id={activity.id}
-              title={activity.title}
-              schedule={activity.schedule}
-              maxcount={activity.maxcount}
-            />)) :
-
-            activityArray.map((activity) => (
+        {category === "online"
+          ? onlineActivities.map((activity) => (
               <Activity
-              id={activity.id}
+                id={activity.id}
                 title={activity.title}
                 schedule={activity.schedule}
                 maxcount={activity.maxcount}
-              />))
-      }
+              />
+            ))
+          : category === "premise"
+          ? premiseActivities.map((activity) => (
+              <Activity
+                id={activity.id}
+                title={activity.title}
+                schedule={activity.schedule}
+                maxcount={activity.maxcount}
+              />
+            ))
+          : activityArray.map((activity) => (
+              <Activity
+                id={activity.id}
+                title={activity.title}
+                schedule={activity.schedule}
+                maxcount={activity.maxcount}
+              />
+            ))}
       </div>
     </main>
   );

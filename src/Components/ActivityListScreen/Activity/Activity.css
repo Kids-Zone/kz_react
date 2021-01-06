@@ -1,15 +1,13 @@
-
 .img-text {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    flex : 1 1 auto;
-    background-color: rgba(170, 211, 21, 0.993);
-    position: relative;
-    text-align: center;
-    color:whiteSmoke;
-    border: 1px;
-    margin-right: 1px;
-    margin-left: 1px;
-    
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  background-color: rgba(170, 211, 21, 0.993);
+  position: relative;
+  text-align: center;
+  color: whiteSmoke;
+  border: 1px;
+  margin-right: 1px;
+  margin-left: 1px;
 }

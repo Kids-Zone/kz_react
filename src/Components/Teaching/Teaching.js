@@ -61,7 +61,7 @@ const Teaching = () => {
               </Card.Body>
             </Card>
           </CardDeck>
-          <Link to="/register">
+          <Link to="/sign-up">
             <Button variant="success" className="btn-lg">
               Join Us
             </Button>

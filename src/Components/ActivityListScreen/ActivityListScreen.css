@@ -1,22 +1,19 @@
 .activity_section {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    flex : 1 1 auto;
-    max-width: 800px;
-    
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  max-width: 800px;
 }
 
-
 /* Activity Search Section */
-.all-activity-image{
-    display: flex;
-    padding: 5px;
-    max-height: 250px;
-    max-width : 250px;
-    z-index: 1;
-     /* Add the blur effect */
-
+.all-activity-image {
+  display: flex;
+  padding: 5px;
+  max-height: 250px;
+  max-width: 250px;
+  z-index: 1;
+  /* Add the blur effect */
 
   /* Full height */
   height: 100%;
@@ -27,24 +24,19 @@
   background-size: cover;
 }
 
-.online-dance-img{
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHJcXUdS7y0M4dyPDQoQr3TZCaEU9roFUj6w&usqp=CAU);
-    position: relative; 
-    text-align: center;
-    max-width : 800px;
-    
+.online-dance-img {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHJcXUdS7y0M4dyPDQoQr3TZCaEU9roFUj6w&usqp=CAU);
+  position: relative;
+  text-align: center;
+  max-width: 800px;
 }
 
-.online-art-img{
-    background-image: url(https://curiosityencouraged.com/wp-content/uploads/2018/04/homeschool-art3.jpg);
-
+.online-art-img {
+  background-image: url(https://curiosityencouraged.com/wp-content/uploads/2018/04/homeschool-art3.jpg);
 }
-.premise-drummer-img{
-    background-image: url(https://fonzibadrums.com/images/home1.jpg);
-   
+.premise-drummer-img {
+  background-image: url(https://fonzibadrums.com/images/home1.jpg);
 }
-.premise-cooking-img{
-    background-image: url(http://ggevd.com/wp-content/uploads/2019/03/cooking-classes-for-kids-c700x420-QdPwiJ.jpg);
-
+.premise-cooking-img {
+  background-image: url(http://ggevd.com/wp-content/uploads/2019/03/cooking-classes-for-kids-c700x420-QdPwiJ.jpg);
 }
-

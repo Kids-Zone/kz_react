@@ -23,11 +23,11 @@ const Teaching = () => {
         >
           <h1>Join our community and teach brilliant kids</h1>
 
-          <p>
+          {/* <p>
             All teachers will be satisfied with our club educational
             environment, and most of our teacher grow their skill by teaching
             our club kids.
-          </p>
+          </p> */}
         </Jumbotron>
       </Container>
       <Container className={"mb-1"}>

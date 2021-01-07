@@ -74,8 +74,16 @@ const Header = () => {
           <Nav.Link componentClass={Link} href="/about">
             About
           </Nav.Link>
-          <Nav.Link componentClass={Link} href="/register">
+          {/* <Nav.Link componentClass={Link} href="/register">
             SignUp
+            {/* <FontAwesomeIcon icon={["fas", "sign-out-alt"]} fixedWidth /> 
+          </Nav.Link> */}
+          <Nav.Link componentClass={Link} href="/sign-in">
+            Sign in
+            {/* <FontAwesomeIcon icon={["fas", "sign-out-alt"]} fixedWidth /> */}
+          </Nav.Link>
+          <Nav.Link componentClass={Link} href="/sign-up">
+            Sign Up
             {/* <FontAwesomeIcon icon={["fas", "sign-out-alt"]} fixedWidth /> */}
           </Nav.Link>
         </Nav>

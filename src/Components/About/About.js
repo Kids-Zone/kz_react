@@ -7,7 +7,7 @@ function About() {
   const history = useHistory();
  
  return (
-  <div className ="container">
+  <div className ="container-fluid">
         <div className ="banner">
             <h3>Who we are</h3>
         </div>
@@ -34,7 +34,7 @@ function About() {
 
         <div className="row activity_section">
        
-            <div className="col-md6  img-text online-dance-img">
+            <div className="col-md6 img-text online-dance-img">
             <button className="button btn btn-info" onClick={() => history.push('/activities')}>Read More..</button>
             </div>
       

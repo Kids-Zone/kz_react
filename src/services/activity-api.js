@@ -9,7 +9,7 @@ const ACTIVITIES = [
       "I recommend this dance class to anyone, it's a great way to get fit and learn a new skill.",
     schedule: "Monday to Friday",
     maxcount: 10,
-    category: "online",
+    category: "premise",
     id: "dance",
   },
   {
@@ -67,6 +67,9 @@ const ActivityAPI = {
       return activity.id.toUpperCase() === id.toUpperCase();
     })[0];
   },
+  getAll: () => {
+    return ACTIVITIES;
+  }
 };
 
 export default ActivityAPI;

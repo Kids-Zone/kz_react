@@ -1,10 +1,10 @@
 import "./Offering.css";
-import { Link, useHistory } from "react-router-dom";
+import { Link, RouteComponentProps } from "react-router-dom";
 
 function Offering(props) {
-  const history = useHistory();
   const category = props.category;
   const type = props.type;
+
   return (
     <section>
       {category === "online" && type === "activity" && (
@@ -32,19 +32,21 @@ function Offering(props) {
         {category === "premise" && type === "mentoring" && (
           <h4>Premise Mentoring</h4>
         )}
-        {type === "activity" && (
-          <Link to={`/activities`}>
-            <button className="button btn btn-info">View</button>
+        {type === "activity" &&(
+          <Link to={`/activities?category=`+ category}>
+            <button className="button btn btn-info">View More</button>
           </Link>
         )}
         {type === "mentoring" && (
-          <Link to={`/teaching`}>
+          <Link to={`/mentoring`}>
             <button className="button btn btn-info">View</button>
           </Link>
         )}
       </div>
     </section>
   );
+
+
 }
 
 export default Offering;

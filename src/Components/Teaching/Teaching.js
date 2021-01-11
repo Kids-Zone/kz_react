@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {
   Container,
-  Col,
   Row,
   Jumbotron,
   Button,
@@ -24,9 +23,9 @@ const Teaching = () => {
           <h1>Join our community and teach brilliant kids</h1>
 
           <p>
-            All teachers will be satisfied with our club educational
-            environment, and most of our teacher grow their skill by teaching
-            our club kids.
+            All mentors are happy with our club's educational environment, and
+            as you know by teaching our kids, we also learn a lot in the
+            process.
           </p>
         </Jumbotron>
       </Container>
@@ -38,7 +37,7 @@ const Teaching = () => {
               <Card.Body>
                 <Card.Title>Teach online</Card.Title>
                 <Card.Text>
-                  You can join us to teach according to your available time.
+                  You can join us to mentor according to your availability.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -55,9 +54,7 @@ const Teaching = () => {
               <Card.Img variant="top" src={Freedom} />
               <Card.Body>
                 <Card.Title>Teach on premises</Card.Title>
-                <Card.Text>
-                  You can come to our club and teach on your available time.
-                </Card.Text>
+                <Card.Text>You can come to our club and teach.</Card.Text>
               </Card.Body>
             </Card>
           </CardDeck>

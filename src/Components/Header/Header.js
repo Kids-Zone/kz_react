@@ -1,11 +1,8 @@
 import "./Header.css";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap/";
-import { Link, NavLink } from "react-router-dom";
+import { Navbar, Nav } from "react-bootstrap/";
+import { Link } from "react-router-dom";
 
 const Header = () => {
-  const linkColor = {
-    color: "white",
-  };
   return (
     <Navbar
       sticky="top"
@@ -16,26 +13,26 @@ const Header = () => {
       expand="lg"
       variant="dark"
     >
-      <Navbar.Brand className="logo" componentClass={Link} href="/" to="/">
+      <Navbar.Brand className="logo" componentclass={Link} href="/" to="/">
         KiDsZoNe
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Link componentClass={Link} href="/">
+          <Nav.Link componentclass={Link} href="/">
             Home
           </Nav.Link>
-          <Nav.Link componentClass={Link} href="/activities">
+          <Nav.Link componentclass={Link} href="/activities">
             Activities
           </Nav.Link>
-          <Nav.Link componentClass={Link} href="/teaching">
+          <Nav.Link componentclass={Link} href="/mentoring">
             Mentoring
           </Nav.Link>
 
-          <Nav.Link componentClass={Link} href="/about">
+          <Nav.Link componentclass={Link} href="/about">
             About
           </Nav.Link>
-          <Nav.Link componentClass={Link} href="/register">
+          <Nav.Link componentclass={Link} href="/register">
             SignUp
             {}
           </Nav.Link>

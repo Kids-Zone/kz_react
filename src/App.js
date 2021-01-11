@@ -2,9 +2,9 @@ import "./App.css";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Classes } from "./Components/Classes/Classes";
-import Teaching from "./Components/Teaching/Teaching";
+import Mentoring from "./Components/Teaching/Teaching";
 import Availability from "./Components/Availability/Availability";
 import ActivityListScreen from "./Components/ActivityListScreen/ActivityListScreen";
 import HomeScreen from "./Components/HomeScreen/HomeScreen";
@@ -19,7 +19,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" exact component={HomeScreen} />
-          <Route path="/teaching" exact component={Teaching} />
+          <Route path="/mentoring" exact component={Mentoring} />
           <Route path="/register" exact component={Register} />
           <Route path="/classes" exact component={Classes} />
           <Route path="/availability" exact component={Availability} />

@@ -13,18 +13,18 @@ function About() {
         <p>
           KidsZone is a platform where you can learn something new everyday in a
           safe environment. It is a educational and engaging club for children
-          that fall in age group of 8-15 yrs. It is a place where you can find a
-          mentor or become one.{" "}
+          that fall into age group of 8-15 yrs. It is a place where you can find a
+          mentor or become one.
         </p>
       </div>
       <div className="banner">
         <h4>
-          As we are currently in tier 4 all classes where possible are now
+          As we are currently in <b>lockdown</b> all classes where possible are now
           offered online.
         </h4>
         <p>
           Please view this space for updates and see what's available, sign up
-          facility will be provided shortly.{" "}
+          facility will be provided shortly.
         </p>
       </div>
       <div className="banner">

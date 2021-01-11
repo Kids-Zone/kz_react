@@ -14,6 +14,8 @@ const ACTIVITIES = [
   },
   {
     title: "Craft",
+    summary: "Arts and Crafts workshops and techniques",
+    details:"Learn how to paint, knit, crochet, sew, screen print, and more",
     schedule: "Monday to Friday",
     maxcount: 10,
     category: "online",
@@ -47,6 +49,9 @@ const ACTIVITIES = [
   },
   {
     title: "Writing",
+    summary:"Creative writing course",
+    details:"",
+    quote:"",
     schedule: "Monday to Friday",
     maxcount: 10,
     category: "online",
@@ -54,6 +59,9 @@ const ACTIVITIES = [
   },
   {
     title: "Reading",
+    summary:"Come join our book club, there's never been a better time to start from the comfort of your own home!",
+    details:"On the first Tuesday of each month, we put a theme or author to a club vote and settle on a book chosen by you.",
+    quote:"Books offer the chance to explore anywhere in this universe, this is especially great at the moment.",
     schedule: "Monday to Friday",
     maxcount: 10,
     category: "online",

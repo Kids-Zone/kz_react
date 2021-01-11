@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body { 
+    flex-wrap: wrap;  
+  }
+
+
+  .inner {
+    width: 450px;
+    background: #ffffff;
+    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+    padding: 40px 55px 45px 55px;
+    border-radius: 15px;
+    transition: all .3s;
+  }
+
+  .outer .form-control:focus {
+    border-color: #167bff;
+    box-shadow: none;
+  }
+  
+  .outer h3 {
+    text-align: center;
+    margin: 0;
+    line-height: 1;
+    padding-bottom: 20px;
+  }
+  
+  .custom-control-label {
+    font-weight: 400;
+  }
+  
+  .forgot-password,
+  .forgot-password a {
+    text-align: left;
+    font-size: 13px;
+    padding-top: 10px;
+    color: #7f7d7d;
+    margin: 0;
+  }
+  
+  .forgot-password a {
+    color: #167bff;
+  }
+
+  .label{
+   
+      text-align: left;
+      margin-left :400px;
+  }
+
+  .form-group{
+
+      margin-right :400px;
+  }
+
+  .container-fluid{
+    margin-top: 40px;
+      margin-bottom: 80px;
+  }

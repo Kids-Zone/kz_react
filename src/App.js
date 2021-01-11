@@ -11,6 +11,8 @@ import HomeScreen from "./Components/HomeScreen/HomeScreen";
 import About from "./Components/About/About";
 import Register from "./Components/Registration/Register";
 import ActivityDetail from "./Components/SessionOverview/ActivityDetail";
+import Login from "./Components/Registration/Login";
+import SignUp from "./Components/Registration/SignUp";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
           <Route path="/activities" exact component={ActivityListScreen} />
           <Route path="/activities/:id" component={ActivityDetail} />
           <Route exact path="/about" component={About} />
+          <Route path="/sign-in" exact component={Login} />
+          <Route path="/sign-up" exact component={SignUp} />
         </Switch>
       </Router>
       <Footer />

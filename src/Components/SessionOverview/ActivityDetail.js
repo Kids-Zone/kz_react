@@ -35,7 +35,7 @@ const ActivityDetail = (props) => {
         </div>
         <div class="row">
           <div class="col-md6">
-            <Link to={"/register"}>
+            <Link to={"/sign-up"}>
               <button class="btn btn-primary">Book now</button>
             </Link>
             <Link to={`/activities`}>

@@ -7,8 +7,8 @@ const Register = () => {
       <Container>
         <Row>
           <Col>
-            <h1>New user sign up </h1>
-            <p>Thank you for registering in KidsZone.</p>
+            <h1>Sign up </h1>
+            <br></br>
             <Form>
               <Form.Group>
                 <Form.Label>Name</Form.Label>
@@ -73,7 +73,7 @@ const Register = () => {
                   />
                 </Form.Group>
               </Form.Row>
-              <Button variant="primary" type="submit" className="btn-lg">
+              <Button variant="primary" type="submit" className="btn-sm">
                 Submit
               </Button>
             </Form>

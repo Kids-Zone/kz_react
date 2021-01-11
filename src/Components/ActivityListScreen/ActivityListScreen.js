@@ -46,6 +46,11 @@ const ActivityListScreen = (props) => {
     <main className="container">
       <div className="row">
         <section class="Search_section">
+        <div className="row">
+            <div className="col">
+              <h3 className="text-center">Welcome to Activity Area</h3>
+            </div>
+          </div>
           <label className="category">Category</label>
           <select
             onChange={(e) => {
@@ -63,11 +68,7 @@ const ActivityListScreen = (props) => {
             id="search_activities"
             type="text"
           ></input>
-          <div className="row">
-            <div className="col">
-              <h3 className="text-center">Welcome to Activity Area</h3>
-            </div>
-          </div>
+        
         </section>
       </div>
       <div className="row">{activityList}</div>

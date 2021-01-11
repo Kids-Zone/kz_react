@@ -16,10 +16,10 @@ import Creative from "../../images/creative.png";
 const Teaching = () => {
   return (
     <>
-      <Container fluid style={{ backgroundImage: `url(${Background})` }}>
+      <Container>
         <Jumbotron
-          style={{ height: "30vh" }}
-          className="jumbotrona text-light bg-transparent"
+          style={{ height: "30vh" , backgroundColor : "rgba(52, 0, 134, 0.85)"}}
+          className="jumbotrona text-light "
         >
           <h1>Join our community and teach brilliant kids</h1>
 
@@ -62,7 +62,7 @@ const Teaching = () => {
             </Card>
           </CardDeck>
           <Link to="/sign-up">
-            <Button variant="success" className="btn-lg">
+            <Button variant="success" className="button btn btn-info">
               Join Us
             </Button>
           </Link>

@@ -1,6 +1,7 @@
 import "./Header.css";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap/";
 import { Link, NavLink } from "react-router-dom";
+import AuthenticationButton from "../Registration/authentication-button";
 
 const Header = () => {
   const linkColor = {
@@ -78,14 +79,15 @@ const Header = () => {
             SignUp
             {/* <FontAwesomeIcon icon={["fas", "sign-out-alt"]} fixedWidth /> 
           </Nav.Link> */}
-          <Nav.Link componentClass={Link} href="/sign-in">
+          {/* <Nav.Link componentClass={Link} href="/sign-in">
             Sign in
             {/* <FontAwesomeIcon icon={["fas", "sign-out-alt"]} fixedWidth /> */}
-          </Nav.Link>
-          <Nav.Link componentClass={Link} href="/sign-up">
+         {/* </Nav.Link> */}
+         {/* <Nav.Link componentClass={Link} href="/sign-up">
             Sign Up
             {/* <FontAwesomeIcon icon={["fas", "sign-out-alt"]} fixedWidth /> */}
-          </Nav.Link>
+          {/*</Nav.Link> */}
+          <AuthenticationButton />
         </Nav>
       </Navbar.Collapse>
     </Navbar>

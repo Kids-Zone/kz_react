@@ -1,13 +1,21 @@
 import "./ActivityListScreen.css";
 import { useState } from "react";
 import SearchActivity from "./SearchActivity/SearchActivity";
+import { useLocation } from "react-router-dom";
 import Activity from "./Activity/Activity";
 import ActivityAPI from "../../services/activity-api";
 
 const ActivityListScreen = (props) => {
   const activities = ActivityAPI.getAll();
 
+  let location = useLocation()
+  let categoryQuery = new URLSearchParams(useLocation().search).get("category");
+
   const [category, setCategory] = useState("");
+
+  if (categoryQuery != null && category !== categoryQuery) {
+    setCategory(categoryQuery);
+  }
 
   const filteredActivities = activities.filter((activity) => {
     return (
@@ -25,6 +33,15 @@ const ActivityListScreen = (props) => {
     />
   ));
 
+  const updateSearch = (newCategory) => {
+    const queryParams = new URLSearchParams(location.search)
+    queryParams.set("category", newCategory)
+    props.history.push({
+      pathname: location.pathname,
+      search: queryParams.toString()
+})
+  }
+
   return (
     <main className="container">
       <div className="row">
@@ -37,8 +54,10 @@ const ActivityListScreen = (props) => {
           <label className="category">Category</label>
           <select
             onChange={(e) => {
-              setCategory(e.target.value);
+              updateSearch(e.target.value);
+              // setCategory(e.target.value);
             }}
+            defaultValue={category}
           >
             <option value="">All</option>
             <option value="online">Online</option>

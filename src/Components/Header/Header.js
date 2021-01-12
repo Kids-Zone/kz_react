@@ -1,12 +1,10 @@
 import "./Header.css";
+
 import { Navbar, Nav, NavDropdown } from "react-bootstrap/";
 import { Link, NavLink } from "react-router-dom";
 import AuthenticationButton from "../Registration/authentication-button";
 
 const Header = () => {
-  const linkColor = {
-    color: "white",
-  };
   return (
     <Navbar
       sticky="top"
@@ -17,19 +15,19 @@ const Header = () => {
       expand="lg"
       variant="dark"
     >
-      <Navbar.Brand className="logo" componentClass={Link} href="/" to="/">
+      <Navbar.Brand className="logo" componentclass={Link} href="/" to="/">
         KiDsZoNe
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Link componentClass={Link} href="/">
+          <Nav.Link componentclass={Link} href="/">
             Home
           </Nav.Link>
-          <Nav.Link componentClass={Link} href="/activities">
+          <Nav.Link componentclass={Link} href="/activities">
             Activities
           </Nav.Link>
-          <Nav.Link componentClass={Link} href="/teaching">
+          <Nav.Link componentclass={Link} href="/mentoring">
             Mentoring
           </Nav.Link>
           {/* <NavDropdown
@@ -38,6 +36,7 @@ const Header = () => {
             id="collasible-nav-dropdown"
           > */}
             {/* <NavDropdown.Item href="#">Classes</NavDropdown.Item> */}
+
 
             {/* <NavDropdown.Item
               componentClass={Link}

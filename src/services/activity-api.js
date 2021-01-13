@@ -35,7 +35,7 @@ const ACTIVITIES = [
     id: "drumming",
   },
   {
-    title: "Cooking & Baking",
+    title: "Cooking",
     summary:
       "Cooking and Baking - whatever we're making it'll always taste wonderful!",
     details:

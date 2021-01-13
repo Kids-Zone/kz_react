@@ -1,5 +1,5 @@
 import "./Offering.css";
-import { Link, RouteComponentProps } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Offering(props) {
   const category = props.category;

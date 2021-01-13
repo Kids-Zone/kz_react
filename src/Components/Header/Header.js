@@ -1,7 +1,7 @@
 import "./Header.css";
 
-import { Navbar, Nav, NavDropdown } from "react-bootstrap/";
-import { Link, NavLink } from "react-router-dom";
+import { Navbar, Nav } from "react-bootstrap/";
+import { Link } from "react-router-dom";
 import AuthenticationButton from "../Registration/authentication-button";
 
 const Header = () => {
@@ -35,10 +35,9 @@ const Header = () => {
             title="Mentoring"
             id="collasible-nav-dropdown"
           > */}
-            {/* <NavDropdown.Item href="#">Classes</NavDropdown.Item> */}
+          {/* <NavDropdown.Item href="#">Classes</NavDropdown.Item> */}
 
-
-            {/* <NavDropdown.Item
+          {/* <NavDropdown.Item
               componentClass={Link}
               href="/teaching"
               to="/teaching"
@@ -46,14 +45,14 @@ const Header = () => {
               Teaching
             </NavDropdown.Item> */}
 
-            {/* <NavDropdown.Item
+          {/* <NavDropdown.Item
               componentClass={Link}
               href="/register"
               to="/register"
             >
               Sign Up
             </NavDropdown.Item> */}
-            {/*
+          {/*
             <NavDropdown.Divider />
              <NavDropdown.Item
               componentClass={Link}
@@ -81,8 +80,8 @@ const Header = () => {
           {/* <Nav.Link componentClass={Link} href="/sign-in">
             Sign in
             {/* <FontAwesomeIcon icon={["fas", "sign-out-alt"]} fixedWidth /> */}
-         {/* </Nav.Link> */}
-         {/* <Nav.Link componentClass={Link} href="/sign-up">
+          {/* </Nav.Link> */}
+          {/* <Nav.Link componentClass={Link} href="/sign-up">
             Sign Up
             {/* <FontAwesomeIcon icon={["fas", "sign-out-alt"]} fixedWidth /> */}
           {/*</Nav.Link> */}

@@ -8,7 +8,6 @@ import {
   Card,
   CardDeck,
 } from "react-bootstrap";
-import Background from "../../images/mentoring-bg-img.png";
 import MotivatedImg from "../../images/motivated-learner.png";
 import Freedom from "../../images/freedom.png";
 import Creative from "../../images/creative.png";

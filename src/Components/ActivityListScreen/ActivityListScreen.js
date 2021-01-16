@@ -1,6 +1,5 @@
 import "./ActivityListScreen.css";
 import { useState } from "react";
-import SearchActivity from "./SearchActivity/SearchActivity";
 import { useLocation } from "react-router-dom";
 import Activity from "./Activity/Activity";
 import ActivityAPI from "../../services/activity-api";

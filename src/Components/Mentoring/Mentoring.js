@@ -11,12 +11,12 @@ import {
 import MotivatedImg from "../../images/motivated-learner.png";
 import Freedom from "../../images/freedom.png";
 import Creative from "../../images/creative.png";
-const Teaching = () => {
+const Mentoring = () => {
   return (
     <>
       <Container>
         <Jumbotron
-          style={{ height: "30vh" , backgroundColor : "rgba(52, 0, 134, 0.85)"}}
+          style={{ height: "30vh" , backgroundColor : "rgb(196, 180, 37)"}}
           className="jumbotrona text-light "
         >
           <h1>Join our community and teach brilliant kids</h1>
@@ -68,4 +68,4 @@ const Teaching = () => {
   );
 };
 
-export default Teaching;
+export default Mentoring;

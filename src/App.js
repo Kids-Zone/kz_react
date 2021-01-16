@@ -4,7 +4,7 @@ import Footer from "./Components/Footer/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Classes } from "./Components/Classes/Classes";
-import Mentoring from "./Components/Teaching/Teaching";
+import Mentoring from "./Components/Mentoring/Mentoring";
 import Availability from "./Components/Availability/Availability";
 import ActivityListScreen from "./Components/ActivityListScreen/ActivityListScreen";
 import HomeScreen from "./Components/HomeScreen/HomeScreen";
@@ -13,6 +13,7 @@ import Register from "./Components/Registration/Register";
 import ActivityDetail from "./Components/SessionOverview/ActivityDetail";
 import Login from "./Components/Registration/Login";
 import SignUp from "./Components/Registration/SignUp";
+import UserProfile from "./Components/UserProfile/UserProfile";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route exact path="/about" component={About} />
           <Route path="/sign-in" exact component={Login} />
           <Route path="/sign-up" exact component={SignUp} />
+          <Route path="/user-account" exact component={UserProfile} />
         </Switch>
       </Router>
       <Footer />

@@ -1,12 +1,12 @@
 import "./Header.css";
 
-import { Navbar, Nav ,NavDropdown} from "react-bootstrap/";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap/";
 import { Link } from "react-router-dom";
 import AuthenticationButton from "../Registration/authentication-button";
-import { useAuth0 } from "@auth0/auth0-react"
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Header = () => {
-  const {user, isAuthenticated, getAccessTokenSilently} =useAuth0();
+  const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
 
   return (
     <Navbar
@@ -27,54 +27,46 @@ const Header = () => {
           <Nav.Link componentclass={Link} href="/">
             Home
           </Nav.Link>
-          {
-                !isAuthenticated &&(
-                  <>
-          <Nav.Link componentclass={Link} href="/activities">
-              
-                 Activities
-            
-          </Nav.Link>
-          <Nav.Link componentclass={Link} href="/mentoring">
-         
+          {!isAuthenticated && (
+            <>
+              <Nav.Link componentclass={Link} href="/activities">
+                Activities
+              </Nav.Link>
+              <Nav.Link componentclass={Link} href="/mentoring">
                 Mentoring
-                
-            
-          </Nav.Link>
-          </>)
-        }
-        {
-              isAuthenticated &&(
-                  <>
-                  <Nav.Link componentclass={Link} href="/membership-validation">
-             Profile
-          </Nav.Link>
-          <NavDropdown
-            className="nav-dropdown"
-            title="Schedule"
-            id="collasible-nav-dropdown"
-          > 
-          {/* <NavDropdown.Item href="#">Schedule</NavDropdown.Item> 
+              </Nav.Link>
+            </>
+          )}
+          {isAuthenticated && (
+            <>
+              <Nav.Link componentclass={Link} href="/membership-validation">
+                Profile
+              </Nav.Link>
+              <NavDropdown
+                className="nav-dropdown"
+                title="Schedule"
+                id="collasible-nav-dropdown"
+              >
+                {/* <NavDropdown.Item href="#">Schedule</NavDropdown.Item> 
             <NavDropdown.Divider /> */}
-             <NavDropdown.Item
-              componentClass={Link}
-              href="/classes"
-              to="/classes"
-            >
-              Classes
-            </NavDropdown.Item> 
-             <NavDropdown.Divider />
-            <NavDropdown.Item
-              componentClass={Link}
-              href="/availability"
-              to="/availability"
-            >
-              Availability
-            </NavDropdown.Item> 
-          </NavDropdown> 
-          
-              </>  )
-}
+                <NavDropdown.Item
+                  componentClass={Link}
+                  href="/classes"
+                  to="/classes"
+                >
+                  Classes
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item
+                  componentClass={Link}
+                  href="/availability"
+                  to="/availability"
+                >
+                  Availability
+                </NavDropdown.Item>
+              </NavDropdown>
+            </>
+          )}
           <Nav.Link componentClass={Link} href="/about">
             About
           </Nav.Link>

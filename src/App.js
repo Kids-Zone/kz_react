@@ -12,11 +12,9 @@ import HomeScreen from "./Components/HomeScreen/HomeScreen";
 import About from "./Components/About/About";
 import Register from "./Components/Registration/Register";
 import ActivityDetail from "./Components/SessionOverview/ActivityDetail";
-import Login from "./Components/Registration/Login";
-import SignUp from "./Components/Registration/SignUp";
 import PostLogin from "./Components/PostLogin/PostLogin";
 import { useAuth0 } from "@auth0/auth0-react";
-import ProtectedRoute from "./auth/protected-route";
+import MembershipValidation from "./Components/Registration/MembershipValidation";
 
 
 function App() {
@@ -39,8 +37,7 @@ function App() {
           <Route path="/activities" exact component={ActivityListScreen} />
           <Route path="/activities/:id" component={ActivityDetail} />
           <Route exact path="/about" component={About} />
-          <Route path="/sign-in" exact component={Login} />
-          <Route path="/sign-up" exact component={SignUp} />
+          <Route path="/membership-validation" exact component={MembershipValidation} />
           <Route path="/PostLogin" exact component={PostLogin} />
         </Switch>
       </Router>

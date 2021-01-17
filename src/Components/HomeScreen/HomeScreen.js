@@ -9,8 +9,6 @@ function HomeScreen(props) {
     <main>
       <ImageSection />
       <DescriptionSection />
-      <h2>User Profile</h2>
-  
       <h2>Explore Activities</h2>
       <p>Look at some of our available activity categories</p>
       <MainSection type="activity" />

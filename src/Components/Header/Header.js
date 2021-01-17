@@ -1,10 +1,13 @@
 import "./Header.css";
 
-import { Navbar, Nav } from "react-bootstrap/";
+import { Navbar, Nav ,NavDropdown} from "react-bootstrap/";
 import { Link } from "react-router-dom";
 import AuthenticationButton from "../Registration/authentication-button";
+import { useAuth0 } from "@auth0/auth0-react"
 
 const Header = () => {
+  const {user, isAuthenticated, getAccessTokenSilently} =useAuth0();
+
   return (
     <Navbar
       sticky="top"
@@ -24,36 +27,35 @@ const Header = () => {
           <Nav.Link componentclass={Link} href="/">
             Home
           </Nav.Link>
+          {
+                !isAuthenticated &&(
+                  <>
           <Nav.Link componentclass={Link} href="/activities">
-            Activities
+              
+                 Activities
+            
           </Nav.Link>
           <Nav.Link componentclass={Link} href="/mentoring">
-            Mentoring
+         
+                Mentoring
+                
+            
           </Nav.Link>
-          {/* <NavDropdown
+          </>)
+        }
+        {
+              isAuthenticated &&(
+                  <>
+                  <Nav.Link componentclass={Link} href="/membership-validation">
+             Profile
+          </Nav.Link>
+          <NavDropdown
             className="nav-dropdown"
-            title="Mentoring"
+            title="Schedule"
             id="collasible-nav-dropdown"
-          > */}
-          {/* <NavDropdown.Item href="#">Classes</NavDropdown.Item> */}
-
-          {/* <NavDropdown.Item
-              componentClass={Link}
-              href="/teaching"
-              to="/teaching"
-            >
-              Teaching
-            </NavDropdown.Item> */}
-
-          {/* <NavDropdown.Item
-              componentClass={Link}
-              href="/register"
-              to="/register"
-            >
-              Sign Up
-            </NavDropdown.Item> */}
-          {/*
-            <NavDropdown.Divider />
+          > 
+          {/* <NavDropdown.Item href="#">Schedule</NavDropdown.Item> 
+            <NavDropdown.Divider /> */}
              <NavDropdown.Item
               componentClass={Link}
               href="/classes"
@@ -68,23 +70,14 @@ const Header = () => {
               to="/availability"
             >
               Availability
-            </NavDropdown.Item> */}
-          {/* </NavDropdown> */}
+            </NavDropdown.Item> 
+          </NavDropdown> 
+          
+              </>  )
+}
           <Nav.Link componentClass={Link} href="/about">
             About
           </Nav.Link>
-          {/* <Nav.Link componentClass={Link} href="/register">
-            SignUp
-            {/* <FontAwesomeIcon icon={["fas", "sign-out-alt"]} fixedWidth /> 
-          </Nav.Link> */}
-          {/* <Nav.Link componentClass={Link} href="/sign-in">
-            Sign in
-            {/* <FontAwesomeIcon icon={["fas", "sign-out-alt"]} fixedWidth /> */}
-          {/* </Nav.Link> */}
-          {/* <Nav.Link componentClass={Link} href="/sign-up">
-            Sign Up
-            {/* <FontAwesomeIcon icon={["fas", "sign-out-alt"]} fixedWidth /> */}
-          {/*</Nav.Link> */}
           <AuthenticationButton />
         </Nav>
       </Navbar.Collapse>

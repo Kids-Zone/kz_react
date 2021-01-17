@@ -10,7 +10,7 @@ const PostLogin = (props) => {
 
   if( isAuthenticated ) {
     props.history.push({
-      pathname: '/mentoring'
+      pathname: '/membership-validation'
 })
   }
 

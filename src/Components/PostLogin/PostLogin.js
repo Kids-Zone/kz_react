@@ -32,7 +32,7 @@ const PostLogin = (props) => {
           });
         } else if(user_metadata.role === "ch"){
           props.history.push({
-            pathname: "/kids-availability",
+            pathname: "/kidsavailability",
           });
         }
         else{

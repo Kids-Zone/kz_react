@@ -1,5 +1,5 @@
 import React from "react";
-import "./Availability.css";
+import "./kids-availability.css";
 
 const kidsavailability = () => {
   return (
@@ -11,16 +11,11 @@ const kidsavailability = () => {
           </h3>
         </div>
       </div>
-      <div style={{ marginTtop: "10px" }}>
-        <div className="container" style={{ marginBottom: "11px" }}>
+      <div>
+        <div className="container" >
           <div className="mt-5 mb-5">
             <div className="container" id="cal">
               <i className="fa fa-calendar-o d-none"></i>
-              <div className="row date-cont date-sticky">
-                <div className="col">
-                  <p className="text-center text-white mb-2 mt-2" id="year"></p>
-                </div>
-              </div>
               <div className="row d-none d-md-flex seven-cols days-sticky">
                 <div className="col-md-1 day days">
                   <p className="text-center text-black">SUNDAY</p>
@@ -126,7 +121,7 @@ const kidsavailability = () => {
                 <div className="col-md-1 day bg-events">
                   <p className="text-nowrap date">20</p>
                   <p className="text-center text-white bg-success event event-spec">
-                    Book Club 16:00
+                    Drumming 16:00
                   </p>
                 </div>
                 <div className="col-md-1 day bg-events">
@@ -143,6 +138,9 @@ const kidsavailability = () => {
                 </div>
                 <div className="col-md-1 day bg-events">
                   <p className="text-nowrap date">25</p>
+                  <p className="text-center text-white bg-success event event-spec">
+                    Drumming 16:00
+                  </p>
                 </div>
                 <div className="col-md-1 day bg-events">
                   <p className="date">26</p>

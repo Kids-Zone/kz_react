@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "./Register.css";
+import { Container, Col, Row, Form, Button } from "react-bootstrap";
 
-export default class SignUp extends Component {
+export default class MembershipValidation extends Component {
     render() {
         return (
 

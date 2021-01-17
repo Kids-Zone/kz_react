@@ -2,6 +2,7 @@ import "./HomeScreen.css";
 import ImageSection from "./ImageSection/ImageSection";
 import DescriptionSection from "./DescriptionSection/DescriptionSection";
 import MainSection from "./MainSection/MainSection";
+import UserProfile from "../PostLogin/PostLogin"
 
 function HomeScreen(props) {
   return (

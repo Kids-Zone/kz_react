@@ -1,9 +1,11 @@
 import "./ActivityDetail.css";
 import { Link } from "react-router-dom";
 import ActivityAPI from "../../services/activity-api";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const ActivityDetail = (props) => {
   const activity = ActivityAPI.get(props.match.params.id);
+  const { loginWithRedirect} = useAuth0();
 
   const jumbotronStyle = {
     backgroundImage:
@@ -35,9 +37,9 @@ const ActivityDetail = (props) => {
         </div>
         <div class="row">
           <div class="col-md6">
-            <Link to={"/sign-up"}>
-              <button class="btn btn-primary">Book now</button>
-            </Link>
+           
+            <button class="btn btn-primary" onClick = {()=>loginWithRedirect()}>Book now</button>
+         
             <Link to={`/activities`}>
               <button class="btn btn-info">More Activites</button>
             </Link>

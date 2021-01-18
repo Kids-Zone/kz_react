@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Register.css";
-import { Container, Col, Row, Form, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export default class MembershipValidation extends Component {
     render() {
@@ -53,7 +53,9 @@ export default class MembershipValidation extends Component {
              <p> <input type="checkbox"/>   I have read, understood, and accepted the PRIVACY POLICY for membership.</p>
              </div>
              <div className="row">
+             <Link to={`/profile`}>
              <button className="button btn btn-info">Proceed</button>
+             </Link>
              </div>
              <div className="row">
             <p>Once your documents are uploaded and validated, you will be redirected to your profile . 

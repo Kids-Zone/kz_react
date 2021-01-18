@@ -23,7 +23,7 @@ function About() {
           offered online.
         </h4>
         <p>
-          Please view this space for updates and see what's available, sign up
+          Please view this space for updates and see what's available, you can now sign up ,but booking
           facility will be provided shortly.
         </p>
       </div>

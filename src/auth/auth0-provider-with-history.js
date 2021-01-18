@@ -26,8 +26,6 @@ const Auth0ProviderWithHistory = ({ children }) => {
     >
       {children}
     </Auth0Provider>
-
-    // <Auth0Lock domain ={domain} clientId={clientId} options ={options}/>
   );
 };
 

@@ -7,12 +7,12 @@ const ClassCard = () => {
       <div className="card-body" style={{ width: "200px" }}>
         <h5 className="card-title">English Writing</h5>
         <ul className="list-unstyled">
-          <li>Date : 02/01/2021</li>
-          <li>Time : 10am -12pm</li>
+          <li>Date : 18/01/2021</li>
+          <li>Time : 10am-12pm</li>
           <li>Students No. : 6</li>
         </ul>
         <button className="btn btn-outline-primary" type="button">
-          Cancel the className
+          Amend Class
         </button>
       </div>
     </div>

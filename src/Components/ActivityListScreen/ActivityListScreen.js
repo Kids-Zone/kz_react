@@ -54,7 +54,6 @@ const ActivityListScreen = (props) => {
           <select
             onChange={(e) => {
               updateSearch(e.target.value);
-              // setCategory(e.target.value);
             }}
             defaultValue={category}
           >

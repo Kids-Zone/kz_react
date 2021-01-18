@@ -1,5 +1,4 @@
 import { useAuth0 } from "@auth0/auth0-react";
-import { JSONPretty } from "react-json-pretty";
 import { useEffect, useState } from "react";
 
 const PostLogin = (props) => {
@@ -28,11 +27,13 @@ const PostLogin = (props) => {
 
         if (user_metadata.role === "me") {
           props.history.push({
-            pathname: "/membership-validation",
+            pathname: "/membership-validation", 
+           // state: { userdata:getUserMetadata()},
           });
         } else if(user_metadata.role === "ch"){
           props.history.push({
-            pathname: "/kidsavailability",
+            pathname: `/profile`,///${user_metadata.role}
+            //state: { userdata:getUserMetadata()},
           });
         }
         else{
@@ -50,24 +51,8 @@ const PostLogin = (props) => {
     getUserMetadata();
   }, []);
 
-  // if (isAuthenticated) {
-  //   if ( userMetadata.role === "ME") {
-  //     props.history.push({
-  //       pathname: "/membership-validation",
-  //    });
-  //   }
-  //   else{
-  //    props.history.push({
-  //       pathname: "/kids-availability",
-  //     });
-  //   }
-  // }
-
   return (
-    <div>
-      <h3>User is {user ? user.email : "Unknown"} </h3>
-      <h3>User metadata is {userMetadata ? userMetadata.role : "Unknown"} </h3>
-    </div>
+    <></>
   );
 };
 

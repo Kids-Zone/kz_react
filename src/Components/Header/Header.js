@@ -1,12 +1,11 @@
 import "./Header.css";
-
 import { Navbar, Nav, NavDropdown } from "react-bootstrap/";
 import { Link } from "react-router-dom";
 import AuthenticationButton from "../Registration/authentication-button";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Header = () => {
-  const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
+  const { isAuthenticated } = useAuth0();
 
   return (
     <Navbar
@@ -39,17 +38,17 @@ const Header = () => {
           )}
           {isAuthenticated && (
             <>
-              <Nav.Link componentclass={Link} href="/membership-validation">
+              <Nav.Link componentclass={Link} href="/profile">
                 Profile
               </Nav.Link>
-              <NavDropdown
+              {/* <NavDropdown
                 className="nav-dropdown"
                 title="Schedule"
                 id="collasible-nav-dropdown"
               >
                 {/* <NavDropdown.Item href="#">Schedule</NavDropdown.Item> 
             <NavDropdown.Divider /> */}
-                <NavDropdown.Item
+                {/* <NavDropdown.Item
                   componentClass={Link}
                   href="/classes"
                   to="/classes"
@@ -64,7 +63,7 @@ const Header = () => {
                 >
                   Availability
                 </NavDropdown.Item>
-              </NavDropdown>
+              </NavDropdown> */}
             </>
           )}
           <Nav.Link componentClass={Link} href="/about">

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import {
   Container,
   Row,
@@ -12,8 +11,11 @@ import MotivatedImg from "../../images/motivated-learner.png";
 import Freedom from "../../images/freedom.png";
 import Creative from "../../images/creative.png";
 import { useAuth0 } from "@auth0/auth0-react";
+import { Link } from "react-router-dom";
+
 const Mentoring = () => {
   const { loginWithRedirect } = useAuth0();
+  const { isAuthenticated } = useAuth0();
   return (
     <>
       <Container>
@@ -59,9 +61,14 @@ const Mentoring = () => {
               </Card.Body>
             </Card>
           </CardDeck>
-            <Button variant="success" className="button btn btn-info"  onClick={() => loginWithRedirect()}>
+          {!isAuthenticated && ( <Button variant="success" className="button btn btn-info"  onClick={() => loginWithRedirect()}>
               Join Us
-            </Button>
+            </Button>)}
+           {isAuthenticated && (<Link to={`/profile`}> <Button variant="success" className="button btn btn-info" >
+              Join Us
+            </Button></Link>)}
+         
+            
         </Row>
       </Container>
     </>

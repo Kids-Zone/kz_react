@@ -39,7 +39,7 @@ function Offering(props) {
         )}
         {type === "mentoring" && (
           <Link to={`/mentoring`}>
-            <button className="button btn btn-info">View</button>
+            <button className="button btn btn-info">View More</button>
           </Link>
         )}
       </div>

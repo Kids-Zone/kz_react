@@ -15,6 +15,7 @@ import ActivityDetail from "./Components/SessionOverview/ActivityDetail";
 import PostLogin from "./Components/PostLogin/PostLogin";
 import { useAuth0 } from "@auth0/auth0-react";
 import MembershipValidation from "./Components/Registration/MembershipValidation";
+import Profile from "./Components/Profile/Profile";
 
 
 function App() {
@@ -23,9 +24,10 @@ function App() {
   if (isLoading) {
     return <div>Loading...</div>;
   }
+
   return (
     <div className="App">
-      <Header />
+      <Header/>
       <Router>
         <Switch>
           <Route path="/" exact component={HomeScreen} />
@@ -39,6 +41,8 @@ function App() {
           <Route exact path="/about" component={About} />
           <Route path="/membership-validation" exact component={MembershipValidation} />
           <Route path="/PostLogin" exact component={PostLogin} />
+          {/* <Route path="/profile/:role" exact component={Profile} /> */}
+          <Route path="/profile" exact component={Profile} />
         </Switch>
       </Router>
       <Footer />

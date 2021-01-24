@@ -1,5 +1,6 @@
 import React from "react";
 import "./Availability.css";
+import { Link } from "react-router-dom";
 
 const Availability = () => {
   return (
@@ -9,8 +10,14 @@ const Availability = () => {
           <h3 className="text-center" style={{ marginTop: "10px" }}>
             My Planner
           </h3>
+          <Link to={`/managePlan`}>
+        <button class="btn btn-primary">Manage Plan</button>
+        </Link>
+    
         </div>
       </div>
+   
+        
       <div style={{ marginTtop: "10px" }}>
         <div className="container" style={{ marginBottom: "11px" }}>
           <div className="mt-5 mb-5">

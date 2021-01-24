@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./MembershipValidation.css";
 import { Container, Col, Row, Form, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export default class MembershipValidation extends Component {
   render() {
@@ -78,7 +79,10 @@ export default class MembershipValidation extends Component {
           </p>
         </div>
         <div className="row">
+          <button className="button btn btn-info">Save</button>
+          <Link to={`/profile`}>
           <button className="button btn btn-info">Proceed</button>
+          </Link>
         </div>
       </div>
     );

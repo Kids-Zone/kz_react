@@ -11,22 +11,17 @@ function About() {
       </div>
       <div className="content">
         <p>
-          KidsZone is a platform where you can learn something new everyday in a
-          safe environment. It is a educational and engaging club for children
-          that fall into age group of 8-15 yrs. It is a place where you can find a
-          mentor or become one.
+          KidsZone is a safe space where you can learn and have fun. It is a educational and engaging club for children
+          that from 8-15 yrs.
         </p>
       </div>
       <div className="banner">
         <h4>
-          As we are currently in <b>lockdown</b> all classes where possible are now
-          offered online.
+          As we are currently in <b>lockdown</b> all classes where possible are
+          now offered online.
         </h4>
-        <p>
-          Please view this space for updates and see what's available, you can now sign up ,but booking
-          facility will be provided shortly.
-        </p>
       </div>
+      <div><p></p></div>
       <div className="banner">
         <h3>What we offer</h3>
       </div>
@@ -67,9 +62,8 @@ function About() {
       <div className="content">
         <p>
           If you wish to be a mentor then we can offer many opportunities.
-          Either online teaching or mentoring at the club. Some classes as you
-          know work better in person! All our teachers are CRB/DBS checked and
-          fully qualified in their field.{" "}
+          Either online teaching or mentoring at the club. All our teachers are
+          CRB/DBS checked and fully qualified in their field.{" "}
         </p>
         <p>
           All classes have a maximum occupancy limit based on category and

@@ -7,7 +7,7 @@ import ActivityAPI from "../../services/activity-api";
 const ActivityListScreen = (props) => {
   const activities = ActivityAPI.getAll();
 
-  let location = useLocation()
+  let location = useLocation();
   let categoryQuery = new URLSearchParams(useLocation().search).get("category");
 
   const [category, setCategory] = useState("");
@@ -33,24 +33,24 @@ const ActivityListScreen = (props) => {
   ));
 
   const updateSearch = (newCategory) => {
-    const queryParams = new URLSearchParams(location.search)
-    queryParams.set("category", newCategory)
+    const queryParams = new URLSearchParams(location.search);
+    queryParams.set("category", newCategory);
     props.history.push({
       pathname: location.pathname,
-      search: queryParams.toString()
-})
-  }
+      search: queryParams.toString(),
+    });
+  };
 
   return (
     <main className="container">
       <div className="row">
         <section class="Search_section">
-        <div className="row">
+          <div className="row">
             <div className="col">
               <h3 className="text-center">Welcome to Activity Area</h3>
             </div>
           </div>
-          <label className="category">Category</label>
+               <b>Category </b>
           <select
             onChange={(e) => {
               updateSearch(e.target.value);
@@ -61,12 +61,6 @@ const ActivityListScreen = (props) => {
             <option value="online">Online</option>
             <option value="premise">Premise</option>
           </select>
-          <input
-            className="search_activities"
-            id="search_activities"
-            type="text"
-          ></input>
-        
         </section>
       </div>
       <div className="row">{activityList}</div>

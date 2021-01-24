@@ -27,16 +27,13 @@ const PostLogin = (props) => {
 
         if (user_metadata.role === "me") {
           props.history.push({
-            pathname: "/membership-validation", 
-           // state: { userdata:getUserMetadata()},
+            pathname: "/membership-validation",
           });
-        } else if(user_metadata.role === "ch"){
+        } else if (user_metadata.role === "ch") {
           props.history.push({
-            pathname: `/profile`,///${user_metadata.role}
-            //state: { userdata:getUserMetadata()},
+            pathname: "/kidsavailability",
           });
-        }
-        else{
+        } else {
           props.history.push({
             pathname: "/about",
           });
@@ -51,9 +48,7 @@ const PostLogin = (props) => {
     getUserMetadata();
   }, []);
 
-  return (
-    <></>
-  );
+  return <></>;
 };
 
 export default PostLogin;

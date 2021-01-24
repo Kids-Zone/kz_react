@@ -21,7 +21,9 @@ const ManageActivityPlan = () => {
         <th scope="col">#</th>
         <th scope="col">Activity</th>
         <th scope="col">Schedule</th>
+        <th scope="col">Participants</th>
         <th scope="col">Amend</th>
+        
       </tr>
     </thead>
     <tbody>
@@ -29,6 +31,7 @@ const ManageActivityPlan = () => {
         <th scope="row">1</th>
         <td>Drumming</td>
         <td>Monday-Friday</td>
+        <td><button class="btn btn-info">View</button></td>
         <td>
         <Link to={`/createPlan`}>
         <button class="btn btn-primary">Edit</button>
@@ -39,6 +42,7 @@ const ManageActivityPlan = () => {
         <th scope="row">2</th>
         <td>Craft</td>
         <td>Tuesday-wednesday</td>
+        <td><button class="btn btn-info">View</button></td>
         <td>
         <Link to={`/createPlan`}>
         <button class="btn btn-primary">Edit</button>
@@ -49,6 +53,7 @@ const ManageActivityPlan = () => {
         <th scope="row">3</th>
         <td>Dance</td>
         <td>Monday-Wednesday</td>
+        <td><button class="btn btn-info">View</button></td>
         <td>
         <Link to={`/createPlan`}>
         <button class="btn btn-primary">Edit</button>

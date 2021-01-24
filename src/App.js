@@ -16,6 +16,8 @@ import PostLogin from "./Components/PostLogin/PostLogin";
 import { useAuth0 } from "@auth0/auth0-react";
 import MembershipValidation from "./Components/Registration/MembershipValidation";
 import Profile from "./Components/Profile/Profile";
+import ManageActivityPlan from "./Components/Mentoring/ManageActivityPlan";
+import CreateActivityPlan from "./Components/Mentoring/CreateActivityPlan";
 
 
 function App() {
@@ -40,6 +42,8 @@ function App() {
           <Route path="/activities/:id" component={ActivityDetail} />
           <Route exact path="/about" component={About} />
           <Route path="/membership-validation" exact component={MembershipValidation} />
+          <Route path="/createPlan" exact component={CreateActivityPlan} />
+          <Route path="/managePlan" exact component={ManageActivityPlan} />
           <Route path="/PostLogin" exact component={PostLogin} />
           {/* <Route path="/profile/:role" exact component={Profile} /> */}
           <Route path="/profile" exact component={Profile} />

@@ -1,7 +1,9 @@
 import React from "react";
 import "./kids-availability.css";
+import ActivityList from "../ActivityListScreen/ActivityList.js";
+import ActivityAPI from "../../services/activity-api"
 
-const kidsavailability = () => {
+const kidsavailability = (props) => {
   return (
     <div>
       <div className="row">
@@ -44,6 +46,8 @@ const kidsavailability = () => {
       </tr>
     </tbody>
   </table>
+  {/* <button class="btn btn-info" onClick={()=>ActivityListScreen()}>More Activites</button> */}
+  <div className="row"><ActivityList activities={ActivityAPI.getAll()}/></div>
   </div>
   );
 };

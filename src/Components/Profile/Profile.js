@@ -7,12 +7,9 @@ import {
   CardDeck,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
 
 
 function Profile() {
-//   const { user } = useAuth0();
-// const {role} =props.match.params.role;
   return (
     <>
       <Container>

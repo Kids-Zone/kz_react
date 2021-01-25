@@ -1,5 +1,5 @@
 import "./Header.css";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap/";
+import { Navbar, Nav } from "react-bootstrap/";
 import { Link } from "react-router-dom";
 import AuthenticationButton from "../Registration/authentication-button";
 import { useAuth0 } from "@auth0/auth0-react";
@@ -41,29 +41,7 @@ const Header = () => {
               <Nav.Link componentclass={Link} href="/profile">
                 Profile
               </Nav.Link>
-              {/* <NavDropdown
-                className="nav-dropdown"
-                title="Schedule"
-                id="collasible-nav-dropdown"
-              >
-                {/* <NavDropdown.Item href="#">Schedule</NavDropdown.Item> 
-            <NavDropdown.Divider /> */}
-                {/* <NavDropdown.Item
-                  componentClass={Link}
-                  href="/classes"
-                  to="/classes"
-                >
-                  Classes
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item
-                  componentClass={Link}
-                  href="/availability"
-                  to="/availability"
-                >
-                  Availability
-                </NavDropdown.Item>
-              </NavDropdown> */}
+            
             </>
           )}
           <Nav.Link componentClass={Link} href="/about">
@@ -76,38 +54,5 @@ const Header = () => {
   );
 };
 
-// function Header(props) {
-//   return (
-//     <header className="header">
-//       <nav class="navbar navbar-dark fixed-top bg-primary navbar-expand-md">
-//         <h1 className="logo">Kids Zone</h1>
-//         <ul className="desktop-list ">
-//           <li>
-//             <a href="#">Home</a>
-//           </li>
-//           <li>
-//             <a href="#">Activities</a>
-//           </li>
-//           <li>
-//             <a href="#">Mentoring</a>
-//           </li>
-//           <li>
-//             <a href="#">About</a>
-//           </li>
-//           <li>
-//             <a href="#">Login/Register</a>
-//           </li>
-//         </ul>
-//         <ul className="mobile-list ">
-//           <i class="fa fa-home"></i>
-//           <i class="fa fa-cogs"></i>
-//           <i class="fas fa-chalkboard-teacher"></i>
-//           <i class="fa fa-info"></i>
-//           <i class="fa fa-users"></i>
-//         </ul>
-//       </nav>
-//     </header>
-//   );
-// }
 
 export default Header;

@@ -1,7 +1,7 @@
 import "./ActivityListScreen.css";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
-import Activity from "./Activity/Activity";
+import ActivityList from "./ActivityList";
 import ActivityAPI from "../../services/activity-api";
 
 const ActivityListScreen = (props) => {
@@ -22,15 +22,6 @@ const ActivityListScreen = (props) => {
       activity.category.toUpperCase() === category.toUpperCase()
     );
   });
-
-  const activityList = filteredActivities.map((activity) => (
-    <Activity
-      id={activity.id}
-      title={activity.title}
-      schedule={activity.schedule}
-      maxcount={activity.maxcount}
-    />
-  ));
 
   const updateSearch = (newCategory) => {
     const queryParams = new URLSearchParams(location.search);
@@ -63,9 +54,11 @@ const ActivityListScreen = (props) => {
           </select>
         </section>
       </div>
-      <div className="row">{activityList}</div>
+      <div className="row"><ActivityList activities={filteredActivities}/></div>
     </main>
   );
 };
+
+
 
 export default ActivityListScreen;

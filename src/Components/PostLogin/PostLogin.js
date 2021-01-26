@@ -2,8 +2,8 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { useEffect, useState } from "react";
 
 const PostLogin = (props) => {
-  const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
-  const [userMetadata, setUserMetadata] = useState(null);
+  const { user, getAccessTokenSilently } = useAuth0();
+  const [setUserMetadata] = useState(null);
 
   useEffect(() => {
     const getUserMetadata = async () => {
@@ -46,7 +46,7 @@ const PostLogin = (props) => {
     };
 
     getUserMetadata();
-  }, []);
+  }, [getAccessTokenSilently, props.history, setUserMetadata, user.sub]);
 
   return <></>;
 };

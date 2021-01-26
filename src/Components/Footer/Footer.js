@@ -10,8 +10,8 @@ function Footer() {
             <a href="#">
               <FontAwesomeIcon icon={["fab", "facebook"]} size="lg" />
             </a>
-            <a href="#">
-              <FontAwesomeIcon icon={["fab", "twitter"]} size="lg" />
+            
+              <a href="#"><FontAwesomeIcon icon={["fab", "twitter"]} size="lg" />
             </a>
             <a href="#">
               <FontAwesomeIcon icon={["fab", "snapchat"]} size="lg" />

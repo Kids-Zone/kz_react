@@ -11,13 +11,10 @@ const Availability = () => {
             My Planner
           </h3>
           <Link to={`/managePlan`}>
-        <button class="btn btn-primary">Manage Plan</button>
-        </Link>
-    
+            <button class="btn btn-primary">Manage Plan</button>
+          </Link>
         </div>
       </div>
-   
-        
       <div style={{ marginTtop: "10px" }}>
         <div className="container" style={{ marginBottom: "11px" }}>
           <div className="mt-5 mb-5">
@@ -156,11 +153,9 @@ const Availability = () => {
                 </div>
                 <div className="col-md-1 day bg-events">
                   <p className="date">30</p>
-                  <a href="#"></a>
                 </div>
                 <div className="col-md-1 day bg-events">
                   <p className="date">31</p>
-                  <a href="#"></a>
                 </div>
               </div>
             </div>

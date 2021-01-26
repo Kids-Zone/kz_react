@@ -46,7 +46,7 @@ const PostLogin = (props) => {
     };
 
     getUserMetadata();
-  }, []);
+  }, [getAccessTokenSilently, props.history, setUserMetadata, user.sub]);
 
   return <></>;
 };

@@ -4,8 +4,8 @@ import { useContext } from 'react';
 import AppContext from '../../auth/AppContext';
 
 const PostLogin = (props) => {
-  const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
-  const [userMetadata, setUserMetadata] = useState(null);
+  const { user, getAccessTokenSilently } = useAuth0();
+  const [setUserMetadata] = useState(null);
 
   const myContext = useContext(AppContext);
   
@@ -50,7 +50,7 @@ const PostLogin = (props) => {
     };
    
     getUserMetadata();
-  }, []);
+  }, [getAccessTokenSilently, props.history, setUserMetadata, user.sub]);
 
   
   return <></>;

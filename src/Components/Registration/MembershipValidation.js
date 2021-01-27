@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./MembershipValidation.css";
-import { Container, Col, Row, Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export default class MembershipValidation extends Component {

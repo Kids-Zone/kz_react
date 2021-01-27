@@ -4,19 +4,20 @@ import { Auth0Provider } from "@auth0/auth0-react";
 import {useState} from "react"
 import AppContext from "./AppContext";
 
-
 const Auth0ProviderWithHistory = ({ children }) => {
- const domain = process.env.REACT_APP_AUTH0_DOMAIN;
- const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
- 
- const [userData, setUserData] = useState(null);
- const userMetadata = {
+  
+  const domain = process.env.REACT_APP_AUTH0_DOMAIN;
+  const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
+
+  const [userData, setUserData] = useState(null);
+  const userMetadata = {
   userData: userData,
   setUserData,
+  };
+  
+  const history = useHistory();
 
-};
- const history = useHistory();
- const onRedirectCallback = (appState) => {
+  const onRedirectCallback = (appState) => {
     history.push(appState?.returnTo || window.location.pathname);
   };
   return (
@@ -24,7 +25,7 @@ const Auth0ProviderWithHistory = ({ children }) => {
     <Auth0Provider
       domain={domain}
       clientId={clientId}
-      redirectUri={window.location.origin+'/PostLogin'}
+      redirectUri={window.location.origin + "/PostLogin"}
       onRedirectCallback={onRedirectCallback}
       audience="https://dev-mhtjevle.us.auth0.com/api/v2/"
       scope="read:current_user update:current_user_metadata"

@@ -3,10 +3,13 @@ import { Navbar, Nav, NavDropdown } from "react-bootstrap/";
 import { Link } from "react-router-dom";
 import AuthenticationButton from "../Registration/authentication-button";
 import { useAuth0 } from "@auth0/auth0-react";
+import { useContext} from 'react';
+import AppContext from '../../auth/AppContext';
 
 const Header = () => {
-  const { isAuthenticated } = useAuth0();
-
+  const {  isAuthenticated } = useAuth0();
+  const myContext = useContext(AppContext);
+  const role = myContext !=null && myContext.userData !=null ? myContext.userData.role : '';
   return (
     <Navbar
       sticky="top"
@@ -36,34 +39,25 @@ const Header = () => {
               </Nav.Link>
             </>
           )}
-          {isAuthenticated && (
+          {isAuthenticated && (role === 'ch') &&
+            (
+              <>
+                <Nav.Link componentclass={Link} href="/activities">
+                  Activities
+                </Nav.Link>
+                <Nav.Link componentclass={Link} href="/kidsavailability">
+                  Profile
+                </Nav.Link>
+                </>
+            )
+
+          }
+          {isAuthenticated   && (role === 'me') && (
             <>
               <Nav.Link componentclass={Link} href="/profile">
                 Profile
               </Nav.Link>
-              {/* <NavDropdown
-                className="nav-dropdown"
-                title="Schedule"
-                id="collasible-nav-dropdown"
-              >
-                {/* <NavDropdown.Item href="#">Schedule</NavDropdown.Item> 
-            <NavDropdown.Divider /> */}
-                {/* <NavDropdown.Item
-                  componentClass={Link}
-                  href="/classes"
-                  to="/classes"
-                >
-                  Classes
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item
-                  componentClass={Link}
-                  href="/availability"
-                  to="/availability"
-                >
-                  Availability
-                </NavDropdown.Item>
-              </NavDropdown> */}
+              
             </>
           )}
           <Nav.Link componentClass={Link} href="/about">

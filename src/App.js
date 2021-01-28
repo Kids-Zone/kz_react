@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Classes } from "./Components/Classes/Classes";
 import Mentoring from "./Components/Mentoring/Mentoring";
 import Availability from "./Components/Availability/Availability";
-import kidsavailability from "./Components/Availability/kids-availability";
+import Kidsavailability from "./Components/Availability/kids-availability";
 import ActivityListScreen from "./Components/ActivityListScreen/ActivityListScreen";
 import HomeScreen from "./Components/HomeScreen/HomeScreen";
 import About from "./Components/About/About";
@@ -37,7 +37,7 @@ function App() {
           <Route path="/register" exact component={Register} />
           <Route path="/classes" exact component={Classes} />
           <Route path="/availability" exact component={Availability} />
-          <Route path="/kidsavailability" exact component={kidsavailability} />
+          <Route path="/kidsavailability" exact component={Kidsavailability} />
           <Route path="/activities" exact component={ActivityListScreen} />
           <Route path="/activities/:id" component={ActivityDetail} />
           <Route exact path="/about" component={About} />

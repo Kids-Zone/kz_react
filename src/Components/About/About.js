@@ -1,18 +1,13 @@
 import "./About.css";
-import { useHistory } from "react-router-dom";
 import {
   Container,
   Row,
-  Jumbotron,
   Card,
   CardDeck,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-
 function About() {
-  const history = useHistory();
-
   return (
     <div className="container">
       <div className="banner">

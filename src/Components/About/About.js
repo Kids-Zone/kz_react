@@ -1,9 +1,13 @@
 import "./About.css";
-import { useHistory } from "react-router-dom";
+import {
+  Container,
+  Row,
+  Card,
+  CardDeck,
+} from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function About() {
-  const history = useHistory();
-
   return (
     <div className="container">
       <div className="banner">
@@ -36,26 +40,36 @@ function About() {
           offer!
         </p>
       </div>
+      <Container className={"mb-1"}>
+        <Row>
+          <CardDeck>
+          <Card>
+              <Card.Img className ="profile-image online-dance-img" variant="top"  />
+              <Card.Body>
+              <Link to={`/activities?category=online`}>
+              <button className="button btn btn-info">Read More</button>
+                </Link>
+                <Card.Text>You can view all online activities here</Card.Text>
+              </Card.Body>
+            </Card>
+            
+		        <Card>
+              <Card.Img className ="profile-image premise-drummer-img" variant="top"  />
+              <Card.Body>
+              <Link to={`/activities?category=premise`}>
+              <button className="button btn btn-info">Read More</button>
+                </Link>
+                <Card.Text>
+                You can view all premise activities here
+                </Card.Text>
+               
+              </Card.Body>
+            </Card>
+  
+          </CardDeck>
+        </Row>
+      </Container>
 
-      <div className="row activity_section">
-        <div className="col-md6  img-text online-dance-img">
-          <button
-            className="button btn btn-info"
-            onClick={() => history.push("/activities")}
-          >
-            Read More..
-          </button>
-        </div>
-
-        <div className="col-md6 img-text premise-drummer-img">
-          <button
-            className="button btn btn-info"
-            onClick={() => history.push("/activities")}
-          >
-            Read More..
-          </button>
-        </div>
-      </div>
       <div className="banner">
         <h3>Want to Mentor</h3>
       </div>
@@ -71,17 +85,21 @@ function About() {
           schedule and publish availability.
         </p>
       </div>
-
-      <div className="row activity_section">
-        <div className="col-12 img-text mentor-img">
-          <button
-            className="button btn btn-info"
-            onClick={() => history.push("/classes")}
-          >
-            Read More..
-          </button>
-        </div>
-      </div>
+      <Container className={"mb-1"}>
+        <Row>
+          <CardDeck>
+          <Card>
+              <Card.Img className ="profile-image mentor-img" variant="top"  />
+              <Card.Body>
+              <Link to={`/mentoring`}>
+                <button className="button btn btn-info">Read More</button>
+                </Link>
+                <Card.Text>You can explore mentoring options here</Card.Text>
+              </Card.Body>
+            </Card>
+          </CardDeck>
+        </Row>
+      </Container>
     </div>
   );
 }

@@ -34,12 +34,12 @@ function Offering(props) {
         )}
         {type === "activity" &&(
           <Link to={`/activities?category=`+ category}>
-            <button className="button btn btn-info">View More</button>
+            <button className="button btn btn-info">Read More</button>
           </Link>
         )}
         {type === "mentoring" && (
           <Link to={`/mentoring`}>
-            <button className="button btn btn-info">View More</button>
+            <button className="button btn btn-info">Read More</button>
           </Link>
         )}
       </div>

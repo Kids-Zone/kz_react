@@ -9,12 +9,15 @@ const Auth0ProviderWithHistory = ({ children }) => {
   const domain = process.env.REACT_APP_AUTH0_DOMAIN;
   const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
 
+  const [user, setUser] = useState(null);
   const [userData, setUserData] = useState(null);
   const userMetadata = {
-  userData: userData,
-  setUserData,
+    user: user,
+    userData: userData,
+    setUser,
+    setUserData,
   };
-  
+
   const history = useHistory();
 
   const onRedirectCallback = (appState) => {

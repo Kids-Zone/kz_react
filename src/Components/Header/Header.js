@@ -9,7 +9,16 @@ import AppContext from '../../auth/AppContext';
 const Header = () => {
   const {  isAuthenticated } = useAuth0();
   const myContext = useContext(AppContext);
-  const role = myContext !=null && myContext.userData !=null ? myContext.userData.role : '';
+  const role = myContext !=null && myContext.userData !=null ? myContext.userData.role : localStorage.getItem('role');
+  
+  //created this function to store the user data in local storage
+  const handleClick=() => {
+  localStorage.setItem('role', myContext.userData.role);
+  localStorage.setItem('user', myContext.user);
+  localStorage.setItem('userDate', myContext.userData);
+  };
+
+
   return (
     <Navbar
       sticky="top"
@@ -42,10 +51,10 @@ const Header = () => {
           {isAuthenticated && (role === 'ch') &&
             (
               <>
-                <Nav.Link componentclass={Link} href="/activities">
+                <Nav.Link componentclass={Link} href="/activities" onClick={handleClick}>
                   Activities
                 </Nav.Link>
-                <Nav.Link componentclass={Link} href="/kidsavailability">
+                <Nav.Link componentclass={Link} href="/kidsavailability" onClick={handleClick}>
                   Profile
                 </Nav.Link>
                 </>
@@ -54,7 +63,7 @@ const Header = () => {
           }
           {isAuthenticated   && (role === 'me') && (
             <>
-              <Nav.Link componentclass={Link} href="/profile">
+              <Nav.Link componentclass={Link} href="/profile" onClick={handleClick}>
                 Profile
               </Nav.Link>
             </>

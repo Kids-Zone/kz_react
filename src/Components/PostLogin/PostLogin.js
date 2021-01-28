@@ -42,7 +42,9 @@ const PostLogin = (props) => {
             pathname: "/about",
           });
         }
+        myContext.setUser(user);
         myContext.setUserData(user_metadata);
+       
         setUserMetadata(user_metadata);
       } catch (e) {
         console.log(e.message);

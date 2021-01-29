@@ -12,9 +12,9 @@ const Kidsavailability = (props) => {
     //initiate  a GET  to API endpoint
     axios
       .get(
-        "https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/Booking/60055c859ee88b00776dc57f"
+        `https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/Booking/${userId}`
       )
-      //if successful print to log for now
+      //if successful fill activities
       .then((response) => {
         setActivities(response.data)
       })

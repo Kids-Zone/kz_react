@@ -1,8 +1,29 @@
-import React from "react";
+import React, {useEffect, useState } from "react";
 import "./Mentor.css";
 import {Link} from 'react-router-dom'
+import ActivityPlanList from "./ActivityPlanList";
+import axios from "axios"
 
 const ManageActivityPlan = () => {
+  const [plannedActivities ,setPlannedActivities] =useState([]);  
+  const userId = "60055c859ee88b00776dc57f";
+
+  useEffect(() => {
+    //initiate  a GET  to API endpoint
+    axios
+      .get(
+        `https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/viewPlan/${userId}`
+      )
+      //if successful print to log for now
+      .then((response) => {
+        console.log(response.data)
+        setPlannedActivities(response.data)
+      })
+      //if error, log error
+      .catch((error) => console.log("error = " + error));
+  }, []);
+  
+  
   return (
     <div>
       <div className="row">
@@ -10,56 +31,23 @@ const ManageActivityPlan = () => {
           <h2 className="text-center" style={{ marginTop: "10px" }}>
             Manage activities
           </h2>
-      <Link to={`/availability`}>
-        <button class="btn btn-primary">My Planner</button>
+        <Link to={`/availability`}>
+        <button className="btn btn-primary">My Planner</button>
         </Link>
         </div>
       </div>
-    <table class="table table-striped">
+    <table className="table table-striped">
     <thead>
       <tr>
         <th scope="col">#</th>
         <th scope="col">Activity</th>
         <th scope="col">Schedule</th>
         <th scope="col">Participants</th>
-        <th scope="col">Amend</th>
-        
+        <th scope="col">Amend</th>  
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Drumming</td>
-        <td>Monday-Friday</td>
-        <td><button class="btn btn-info">View</button></td>
-        <td>
-        <Link to={`/createPlan`}>
-        <button class="btn btn-primary">Edit</button>
-        </Link>
-        <button class="btn btn-info">Cancel</button></td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Craft</td>
-        <td>Tuesday-wednesday</td>
-        <td><button class="btn btn-info">View</button></td>
-        <td>
-        <Link to={`/createPlan`}>
-        <button class="btn btn-primary">Edit</button>
-        </Link>
-        <button class="btn btn-info">Cancel</button></td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Dance</td>
-        <td>Monday-Wednesday</td>
-        <td><button class="btn btn-info">View</button></td>
-        <td>
-        <Link to={`/createPlan`}>
-        <button class="btn btn-primary">Edit</button>
-        </Link>
-        <button class="btn btn-info">Cancel</button></td>
-      </tr>
+      <ActivityPlanList plannedActivities = {plannedActivities}/>
     </tbody>
   </table>
   </div>

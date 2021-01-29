@@ -14,8 +14,8 @@ const Header = () => {
   //created this function to store the user data in local storage
   const handleClick=() => {
   localStorage.setItem('role', myContext.userData.role);
-  localStorage.setItem('user', myContext.user);
-  localStorage.setItem('userDate', myContext.userData);
+  localStorage.setItem('username', myContext.user.nickname);
+  localStorage.setItem('useremail', myContext.user.email);
   };
 
 

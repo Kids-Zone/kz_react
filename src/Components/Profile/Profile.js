@@ -10,23 +10,25 @@ import { Link } from "react-router-dom";
 
 
 function Profile() {
+  const user =localStorage.getItem('username');
   return (
     <>
       <Container>
         <Jumbotron
-          style={{ height: "30vh" , backgroundColor : "rgb(196, 180, 37)"}}
+          style={{ height: "2px" , backgroundColor : "rgb(196, 180, 37)"}}
           className="jumbotrona text-light "
         >
-          <h1>Welcome! User</h1>
+          <h3>Welcome! { user} </h3>
+          
+        </Jumbotron>
+      </Container>
+          <Container className={"mb-1"}>
           <p>
             All mentors will be satisfied with our club educational
             environment, and most of our mentor grow their skill by mentoring
             our club kids.
           </p>
      
-        </Jumbotron>
-      </Container>
-          <Container className={"mb-1"}>
         <Row>
           <CardDeck>
           <Card>

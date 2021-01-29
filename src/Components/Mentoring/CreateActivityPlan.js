@@ -58,7 +58,6 @@ const CreateActivityPlan = () => {
                <Form.Control as="select">
                  <option>Choose...</option>
                  <option>Weekly</option>
-                 <option>Monthly</option>
                </Form.Control>
                </Col>   
            </Form.Row>

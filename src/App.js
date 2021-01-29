@@ -45,7 +45,6 @@ function App() {
           <Route path="/createPlan" exact component={CreateActivityPlan} />
           <Route path="/managePlan" exact component={ManageActivityPlan} />
           <Route path="/PostLogin" exact component={PostLogin} />
-          {/* <Route path="/profile/:role" exact component={Profile} /> */}
           <Route path="/profile" exact component={Profile} />
         </Switch>
       </Router>

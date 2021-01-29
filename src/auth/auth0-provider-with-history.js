@@ -1,11 +1,22 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { Auth0Provider } from "@auth0/auth0-react";
+import {useState} from "react"
+import AppContext from "./AppContext";
 
 const Auth0ProviderWithHistory = ({ children }) => {
   
   const domain = process.env.REACT_APP_AUTH0_DOMAIN;
   const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
+
+  const [user, setUser] = useState(null);
+  const [userData, setUserData] = useState(null);
+  const userMetadata = {
+    user: user,
+    userData: userData,
+    setUser,
+    setUserData,
+  };
 
   const history = useHistory();
 
@@ -13,6 +24,7 @@ const Auth0ProviderWithHistory = ({ children }) => {
     history.push(appState?.returnTo || window.location.pathname);
   };
   return (
+    <AppContext.Provider value={userMetadata}>
     <Auth0Provider
       domain={domain}
       clientId={clientId}
@@ -23,6 +35,7 @@ const Auth0ProviderWithHistory = ({ children }) => {
     >
       {children}
     </Auth0Provider>
+    </AppContext.Provider>
   );
 };
 

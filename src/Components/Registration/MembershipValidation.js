@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./MembershipValidation.css";
 import { Link } from "react-router-dom";
 
 export default class MembershipValidation extends Component {

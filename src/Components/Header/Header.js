@@ -3,9 +3,21 @@ import { Navbar, Nav } from "react-bootstrap/";
 import { Link } from "react-router-dom";
 import AuthenticationButton from "../Registration/authentication-button";
 import { useAuth0 } from "@auth0/auth0-react";
+import { useContext} from 'react';
+import AppContext from '../../auth/AppContext';
 
 const Header = () => {
-  const { isAuthenticated } = useAuth0();
+  const {  isAuthenticated } = useAuth0();
+  const myContext = useContext(AppContext);
+  const role = myContext !=null && myContext.userData !=null ? myContext.userData.role : localStorage.getItem('role');
+  
+  //created this function to store the user data in local storage
+  const handleClick=() => {
+  localStorage.setItem('role', myContext.userData.role);
+  localStorage.setItem('username', myContext.user.nickname);
+  localStorage.setItem('useremail', myContext.user.email);
+  };
+
 
   return (
     <Navbar
@@ -36,12 +48,24 @@ const Header = () => {
               </Nav.Link>
             </>
           )}
-          {isAuthenticated && (
+          {isAuthenticated && (role === 'ch') &&
+            (
+              <>
+                <Nav.Link componentclass={Link} href="/activities" onClick={handleClick}>
+                  Activities
+                </Nav.Link>
+                <Nav.Link componentclass={Link} href="/kidsavailability" onClick={handleClick}>
+                  Profile
+                </Nav.Link>
+                </>
+            )
+
+          }
+          {isAuthenticated   && (role === 'me') && (
             <>
-              <Nav.Link componentclass={Link} href="/profile">
+              <Nav.Link componentclass={Link} href="/profile" onClick={handleClick}>
                 Profile
               </Nav.Link>
-            
             </>
           )}
           <Nav.Link componentClass={Link} href="/about">

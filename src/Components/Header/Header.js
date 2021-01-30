@@ -16,6 +16,7 @@ const Header = () => {
   localStorage.setItem('role', myContext.userData.role);
   localStorage.setItem('username', myContext.user.nickname);
   localStorage.setItem('useremail', myContext.user.email);
+  localStorage.setItem('userId', "60055c859ee88b00776dc57f");
   };
 
 

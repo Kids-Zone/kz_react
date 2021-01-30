@@ -6,7 +6,7 @@ import axios from "axios"
 
 const ManageActivityPlan = () => {
   const [plannedActivities ,setPlannedActivities] =useState([]);  
-  const userId = "60055c859ee88b00776dc57f";
+  const userId = "6005665ed93fdd006facc1c9";
 
   useEffect(() => {
     //initiate  a GET  to API endpoint

@@ -1,4 +1,4 @@
-import { React, useEffect,useState } from "react";
+import { React, useEffect, useState } from "react";
 import "./kids-availability.css";
 import ActivityList from "../ActivityListScreen/ActivityList.js";
 import ActivityAPI from "../../services/activity-api";
@@ -17,17 +17,19 @@ const Kidsavailability = (props) => {
       )
       //if successful fill activities
       .then((response) => {
-        setBookedActivities(response.data)
+        setBookedActivities(response.data);
       })
       //if error, log error
       .catch((error) => console.log("error = " + error));
   }, []);
 
-  const cancelBooking = BookingId => {
-    const updatedBookings = BookedActivities.filter(booking => booking.bookingId !== BookingId)
-    setBookedActivities(updatedBookings)
-  }
-    return (
+  const cancelBooking = (BookingId) => {
+    const updatedBookings = BookedActivities.filter(
+      (booking) => booking.bookingId !== BookingId
+    );
+    setBookedActivities(updatedBookings);
+  };
+  return (
     <div>
       <div className="row">
         <div className="col">
@@ -39,26 +41,18 @@ const Kidsavailability = (props) => {
       <table class="table table-striped">
         <thead>
           <tr>
-          <td>name {BookingList} </td>
+            <td> </td>
             <th scope="col">#</th>
             <th scope="col">Booked</th>
             <th scope="col">When</th>
-            <th scope="col">Amend</th>
+            <th scope="col">Amend</th>            
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>name {BookedActivities[0] ? BookedActivities[0].activity_name : 'no activity'} </td>
-            <td>Tomorrow 4pm</td>
-            <td>
-              <button class="btn btn-primary">Rebook</button>
-              <button class="btn btn-info">Cancel</button>
-            </td>
-          </tr>
-             <tr> <BookingList BookedActivities={BookedActivities} />
-          </tr>
-         
+   
+            {" "}
+            <BookingList BookedActivities={BookedActivities} />
+     
         </tbody>
       </table>
       {/* <button class="btn btn-info" onClick={()=>ActivityListScreen()}>More Activites</button> */}

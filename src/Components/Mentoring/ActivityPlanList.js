@@ -1,8 +1,34 @@
 import {Link} from 'react-router-dom'
+import axios from "axios"
 
 const ActivityPlanList = (props) => {
+
+  const activity_Id="7585379";
+  const userId = "6005665ed93fdd006facc1c9";
+  const handleCancel = (e) => {
+  //initiate  a DELETE  to API endpoint
+  axios
+    .delete(
+      `https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/cancelPlan/${activity_Id}`
+    )
+    //if successful print to log for now
+    .then((response) => {
+      alert('Activity deleted successfully ' );
+      axios .get(
+        `https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/viewPlan/${userId}`
+      )
+      //if successful print to log for now
+      .then((response) => {
+        console.log(response.data)
+        props.managePlan.setPlannedActivities(response.data);
+      })
+    })
+    //if error, log error
+    .catch((error) => console.log("error = " + error));
+};
+
     return props.plannedActivities.map((activity) => (
-      <tr>
+      <tr key={activity.activity_id}>
         <th scope="row">{activity.activity_id}</th>
         <td>{activity.activity_name}</td>
         <td>{activity.activity_schedule}</td>
@@ -11,9 +37,7 @@ const ActivityPlanList = (props) => {
           <Link to="/createPlan">
         <button className="btn btn-primary">Edit</button>
         </Link>
-        <Link to="/createPlan" >
-        <button className="btn btn-info">Cancel</button>
-        </Link>
+        <button className="btn btn-info" onClick = {handleCancel}>Cancel</button>
         </td>
       </tr>
     ));

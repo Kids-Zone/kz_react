@@ -5,8 +5,8 @@ import {Link} from 'react-router-dom';
 import axios from "axios";
 
 const CreateActivityPlan = () => {
-  
-  const activity_Id="6";
+  const activity_Id="7585379";
+
   const initialFormData = Object.freeze({
     // auth0Id: localStorage.getItem('userId'),
     auth0Id: '6005665ed93fdd006facc1c9',
@@ -46,10 +46,13 @@ const CreateActivityPlan = () => {
     e.preventDefault()
  
       //initiate  a PUT  to API endpoint
-      axios
-        .put(
-          `https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/updatePlan/${activity_Id}`
-        )
+      axios({
+        method: 'put',
+        url: `https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/createPlan/${activity_Id}`,
+       
+        data: formData,
+        headers: {'content-type': 'application/x-www-form-urlencoded' }
+        })
         //if successful print to log for now
         .then((response) => {
           console.log(response.data)
@@ -59,21 +62,7 @@ const CreateActivityPlan = () => {
         .catch((error) => console.log("error = " + error));
   };
   
-  const handleCancel = (e) => {
-    e.preventDefault()
-      //initiate  a DELETE  to API endpoint
-      axios
-        .delete(
-          `https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/cancelPlan/${activity_Id}`
-        )
-        //if successful print to log for now
-        .then((response) => {
-          console.log(response.data)
-          alert('Activity deleted successfully ' );
-        })
-        //if error, log error
-        .catch((error) => console.log("error = " + error));
-  };
+  
 
   return (
     <>
@@ -175,7 +164,6 @@ const CreateActivityPlan = () => {
               </Form.Group>
               <Button class="button btn btn-primary" onClick = {handleSave}>Save</Button>
               <Button class="button btn btn-primary" onClick = {handleEdit}>Edit</Button>
-              <Button class="button btn btn-info" onClick = {handleCancel}>Cancel</Button>
               <Link to={`/availability`}>
               <Button class="button btn btn-info">My Planner</Button>
               </Link>

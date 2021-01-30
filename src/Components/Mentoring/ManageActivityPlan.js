@@ -6,8 +6,13 @@ import axios from "axios"
 
 const ManageActivityPlan = () => {
   const [plannedActivities ,setPlannedActivities] =useState([]);  
-  const userId = "60055c859ee88b00776dc57f";
+  const userId = "6005665ed93fdd006facc1c9";
 
+  const managePlan ={
+    plannedActivities :plannedActivities,
+    setPlannedActivities,
+  }
+  
   useEffect(() => {
     //initiate  a GET  to API endpoint
     axios
@@ -22,7 +27,6 @@ const ManageActivityPlan = () => {
       //if error, log error
       .catch((error) => console.log("error = " + error));
   }, []);
-  
   
   return (
     <div>
@@ -47,7 +51,7 @@ const ManageActivityPlan = () => {
       </tr>
     </thead>
     <tbody>
-      <ActivityPlanList plannedActivities = {plannedActivities}/>
+      <ActivityPlanList plannedActivities = {plannedActivities} managePlan ={managePlan}/>
     </tbody>
   </table>
   </div>

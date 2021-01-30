@@ -29,8 +29,7 @@ const CreateActivityPlan = () => {
         url: 'https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/createPlan',
        
         data: formData,
-        headers: {'content-type': 'application/json;charset=UTF-8',
-        "Access-Control-Allow-Origin": "*", }
+        headers: {'content-type': 'application/json;charset=UTF-8'}
         })
         //if successful print to log for now
         .then((response) => {
@@ -51,7 +50,7 @@ const CreateActivityPlan = () => {
         url: `https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/createPlan/${activity_Id}`,
        
         data: formData,
-        headers: {'content-type': 'application/x-www-form-urlencoded' }
+        headers: {'content-type': 'application/json;charset=UTF-8' }
         })
         //if successful print to log for now
         .then((response) => {

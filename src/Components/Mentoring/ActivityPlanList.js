@@ -3,10 +3,11 @@ import axios from "axios"
 
 const ActivityPlanList = (props) => {
 
-  const activity_Id="7585379";
+  let activity_Id="";
   const userId = "6005665ed93fdd006facc1c9";
   const handleCancel = (e) => {
   //initiate  a DELETE  to API endpoint
+  activity_Id =  e.target.value.trim();
   axios
     .delete(
       `https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/cancelPlan/${activity_Id}`
@@ -37,7 +38,8 @@ const ActivityPlanList = (props) => {
           <Link to="/createPlan">
         <button className="btn btn-primary">Edit</button>
         </Link>
-        <button className="btn btn-info" onClick = {handleCancel}>Cancel</button>
+        <button className="btn btn-info" key={activity.activity_id}
+    value={activity.activity_id} onClick = {handleCancel}>Cancel</button>
         </td>
       </tr>
     ));

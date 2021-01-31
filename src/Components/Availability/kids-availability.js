@@ -4,13 +4,16 @@ import ActivityList from "../ActivityListScreen/ActivityList.js";
 import ActivityAPI from "../../services/activity-api";
 import BookingList from "./BookingList";
 import axios from "axios";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Kidsavailability = (props) => {
   const [BookedActivities, setBookedActivities] = useState([]);
 
   const [displayActivities, setDisplayActivities] = useState(false);
 
-  const userId = "60055c859ee88b00776dc57f";
+  const { user } = useAuth0();
+
+  const userId = user && user.sub ? user.sub.split("|")[1] : "";
 
   useEffect(() => {
     //initiate  a GET  to API endpoint

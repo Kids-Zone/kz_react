@@ -5,7 +5,7 @@ function Activity(props) {
   const style = {
     backgroundImage:
       "linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.1)), url(/images/" +
-      props.id +
+      props.title +
       ".jpg)",
     backgroundSize: "cover",
     backgroundColor: "rgba(52, 0, 134, 0.85)",

@@ -16,7 +16,7 @@ const ActivityDetail = (props) => {
   const jumbotronStyle = {
     backgroundImage:
       "linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.1)), url(/images/" +
-      activity.id +
+      activity.title +
       ".jpg)",
     backgroundAttachment: "fixed",
     backgroundRepeat: "no-repeat",
@@ -27,7 +27,7 @@ const ActivityDetail = (props) => {
     //initiate  a POST  to API endpoint
     axios({
       method: "post",
-      url: "https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/booking",
+      url: "/dev/Booking/",
       data: {
         user_id: user_id,
         activity_id : activity.id
@@ -36,7 +36,9 @@ const ActivityDetail = (props) => {
       //if successful print to log for now
       .then((response) => {
         console.log(response.data);
-        alert("Activity booked successfully ");
+        props.history.push({
+          pathname: "/kidsavailability" 
+        });
       })
       //if error, log error
       .catch((error) => console.log("error = " + error));

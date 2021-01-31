@@ -1,13 +1,17 @@
-import "./ActivityDetail.css";
-import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import ActivityAPI from "../../services/activity-api";
+import "./ActivityDetail.css";
 
 const ActivityDetail = (props) => {
   const activity = ActivityAPI.get(props.match.params.id);
   const { loginWithRedirect } = useAuth0();
   const { isAuthenticated } = useAuth0();
+
+  const { user } = useAuth0();
+
+  const user_id = user && user.sub ? user.sub.split("|")[1] : "";
 
   const jumbotronStyle = {
     backgroundImage:
@@ -18,11 +22,16 @@ const ActivityDetail = (props) => {
     backgroundRepeat: "no-repeat",
     height: "45vh",
   };
-  const bookActivity = (e) => {
+
+  const bookActivity = () => {
     //initiate  a POST  to API endpoint
     axios({
       method: "post",
       url: "https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/booking",
+      data: {
+        user_id: user_id,
+        activity_id : activity.id
+      }
     })
       //if successful print to log for now
       .then((response) => {
@@ -32,6 +41,7 @@ const ActivityDetail = (props) => {
       //if error, log error
       .catch((error) => console.log("error = " + error));
   };
+
   return (
     <div>
       <div class="jumbotron container-fluid" style={jumbotronStyle}>

@@ -1,11 +1,12 @@
 import "./ActivityDetail.css";
 import { Link } from "react-router-dom";
-import ActivityAPI from "../../services/activity-api";
 import { useAuth0 } from "@auth0/auth0-react";
+import axios from "axios";
+import ActivityAPI from "../../services/activity-api";
 
 const ActivityDetail = (props) => {
   const activity = ActivityAPI.get(props.match.params.id);
-  const { loginWithRedirect} = useAuth0();
+  const { loginWithRedirect } = useAuth0();
   const { isAuthenticated } = useAuth0();
 
   const jumbotronStyle = {
@@ -17,7 +18,20 @@ const ActivityDetail = (props) => {
     backgroundRepeat: "no-repeat",
     height: "45vh",
   };
-
+  const bookActivity = (e) => {
+    //initiate  a POST  to API endpoint
+    axios({
+      method: "post",
+      url: "https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/booking",
+    })
+      //if successful print to log for now
+      .then((response) => {
+        console.log(response.data);
+        alert("Activity booked successfully ");
+      })
+      //if error, log error
+      .catch((error) => console.log("error = " + error));
+  };
   return (
     <div>
       <div class="jumbotron container-fluid" style={jumbotronStyle}>
@@ -38,9 +52,20 @@ const ActivityDetail = (props) => {
         </div>
         <div class="row">
           <div class="col-md6">
-           {!isAuthenticated && ( <button class="btn btn-primary" onClick = {()=>loginWithRedirect()}>Book now</button>)}
-           {isAuthenticated && (<Link to={`/profile`}> <button class="btn btn-primary">Book now</button> </Link>)}
-         
+            {!isAuthenticated && (
+              <button
+                class="btn btn-primary"
+                onClick={() => loginWithRedirect()}
+              >
+                Book now
+              </button>
+            )}
+            {isAuthenticated && (
+              <button class="btn btn-primary" onClick={() => bookActivity()}>
+                Book now
+              </button>
+            )}
+
             <Link to={`/activities`}>
               <button class="btn btn-info">More Activites</button>
             </Link>

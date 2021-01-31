@@ -7,6 +7,9 @@ import axios from "axios";
 
 const Kidsavailability = (props) => {
   const [BookedActivities, setBookedActivities] = useState([]);
+
+  const [displayActivities, setDisplayActivities] = useState(false);
+
   const userId = "60055c859ee88b00776dc57f";
 
   useEffect(() => {
@@ -29,6 +32,12 @@ const Kidsavailability = (props) => {
     );
     setBookedActivities(updatedBookings);
   };
+
+  const toggleActivityDisplay = () => {
+    setDisplayActivities(!displayActivities);
+    console.log("Toggling acivities " + displayActivities);
+  };
+
   return (
     <div>
       <div className="row">
@@ -45,19 +54,24 @@ const Kidsavailability = (props) => {
             <th scope="col">#</th>
             <th scope="col">Booked</th>
             <th scope="col">When</th>
-            <th scope="col">Amend</th>            
+            <th scope="col">Amend</th>
           </tr>
         </thead>
         <tbody>
-   
-            {" "}
-            <BookingList BookedActivities={BookedActivities} />
-     
+          {" "}
+          <BookingList BookedActivities={BookedActivities} />
         </tbody>
       </table>
       {/* <button class="btn btn-info" onClick={()=>ActivityListScreen()}>More Activites</button> */}
-      <div className="row">
-        <ActivityList activities={ActivityAPI.getAll()} />
+
+      <div>
+        <button class="btn btn-info" onClick={toggleActivityDisplay}>{ displayActivities ?"Hide activity list": "Show more activities" }</button>
+      </div>
+
+      <div className="showActivities">
+        <div className="row">
+        { displayActivities ? <ActivityList activities={ActivityAPI.getAll()}/> : "" }
+        </div>
       </div>
     </div>
   );

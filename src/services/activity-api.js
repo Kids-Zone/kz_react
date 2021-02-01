@@ -76,7 +76,7 @@ import axios from "axios";
 const Activities = [];
 
 const ActivityAPI = {
-  get: (id) => {
+  getActivity : (id) => {
     return Activities.filter((activity) => {
       return activity.title.toUpperCase() === id.toUpperCase();
     })[0];

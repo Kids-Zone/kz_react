@@ -7,7 +7,7 @@ import BookingList from "./BookingList";
 import "./kids-availability.css";
 
 const Kidsavailability = (props) => {
-  const [BookedActivities, setBookedActivities] = useState([]);
+  const [bookedActivities, setBookedActivities] = useState([]);
 
   const [displayActivities, setDisplayActivities] = useState(false);
 
@@ -37,16 +37,15 @@ const Kidsavailability = (props) => {
 
   const toggleActivityDisplay = () => {
     setDisplayActivities(!displayActivities);
-    console.log("Toggling acivities " + displayActivities);
   };
 
   const deleteBooking = (id) => {
     console.log("Deleting " + id);
     ActivityAPI.delete(id).then(() => {
       setBookedActivities(
-        BookedActivities.filter((booking) => {
+        [...bookedActivities.filter((booking) => {
           return booking.id != id;
-        })
+        })]
       );
     });
   };
@@ -73,7 +72,7 @@ const Kidsavailability = (props) => {
         <tbody>
           {" "}
           <BookingList
-            BookedActivities={BookedActivities}
+            bookedActivities={bookedActivities}
             deleteBooking={deleteBooking}
           />
         </tbody>

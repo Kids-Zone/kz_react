@@ -1,15 +1,21 @@
-import { React, useEffect, useState } from "react";
-import "./kids-availability.css";
-import ActivityList from "../ActivityListScreen/ActivityList.js";
-import ActivityAPI from "../../services/activity-api";
-import BookingList from "./BookingList";
-import axios from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
+import axios from "axios";
+import { React, useEffect, useState } from "react";
+import ActivityAPI from "../../services/activity-api";
+import ActivityList from "../ActivityListScreen/ActivityList.js";
+import BookingList from "./BookingList";
+import "./kids-availability.css";
 
 const Kidsavailability = (props) => {
   const [BookedActivities, setBookedActivities] = useState([]);
 
   const [displayActivities, setDisplayActivities] = useState(false);
+
+  const [activities, setActivities] = useState([]);
+
+  useEffect(() => {
+    ActivityAPI.getAll().then((data) => setActivities(data));
+  });
 
   const { user } = useAuth0();
 
@@ -29,16 +35,20 @@ const Kidsavailability = (props) => {
       .catch((error) => console.log("error = " + error));
   }, []);
 
-  const cancelBooking = (BookingId) => {
-    const updatedBookings = BookedActivities.filter(
-      (booking) => booking.bookingId !== BookingId
-    );
-    setBookedActivities(updatedBookings);
-  };
-
   const toggleActivityDisplay = () => {
     setDisplayActivities(!displayActivities);
     console.log("Toggling acivities " + displayActivities);
+  };
+
+  const deleteBooking = (id) => {
+    console.log("Deleting " + id);
+    ActivityAPI.delete(id).then(() => {
+      setBookedActivities(
+        BookedActivities.filter((booking) => {
+          return booking.id != id;
+        })
+      );
+    });
   };
 
   return (
@@ -62,18 +72,21 @@ const Kidsavailability = (props) => {
         </thead>
         <tbody>
           {" "}
-          <BookingList BookedActivities={BookedActivities} />
+          <BookingList
+            BookedActivities={BookedActivities}
+            deleteBooking={deleteBooking}
+          />
         </tbody>
       </table>
-      {/* <button class="btn btn-info" onClick={()=>ActivityListScreen()}>More Activites</button> */}
-
       <div>
-        <button class="btn btn-info" onClick={toggleActivityDisplay}>{ displayActivities ?"Hide activity list": "Show more activities" }</button>
+        <button class="btn btn-info" onClick={toggleActivityDisplay}>
+          {displayActivities ? "Hide activity list" : "Show more activities"}
+        </button>
       </div>
 
       <div className="showActivities">
         <div className="row">
-        { displayActivities ? <ActivityList activities={ActivityAPI.getAll()}/> : "" }
+          {displayActivities ? <ActivityList activities={activities} /> : ""}
         </div>
       </div>
     </div>

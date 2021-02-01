@@ -1,4 +1,4 @@
-const ACTIVITIES = [
+/* const ACTIVITIES = [
   {
     title: "Dance",
     summary:
@@ -69,15 +69,28 @@ const ACTIVITIES = [
     id: "6",
   },
 ];
+ */
+
+import axios from "axios";
+
+const Activities = [];
 
 const ActivityAPI = {
   get: (id) => {
-    return ACTIVITIES.filter((activity) => {
+    return Activities.filter((activity) => {
       return activity.title.toUpperCase() === id.toUpperCase();
     })[0];
   },
   getAll: () => {
-    return ACTIVITIES;
+   return axios
+    .get(
+      "https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/allActivity"
+    ).then((response) => response.data)
+    // //if error, log error
+    // .catch((error) => console.log("error = " + error));
+  },
+  delete: (id) => {
+    return axios.delete("https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/Booking/" + id)
   }
 };
 

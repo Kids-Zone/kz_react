@@ -1,17 +1,15 @@
-import { Link } from "react-router-dom";
-import Booking from "./Booking";
+import ActivityAPI from "../../services/activity-api";
 
 const BookingList = (props) => {
+
   return props.BookedActivities.map((activity) => (
     <tr>
       <th scope="row"></th>
-      <td>ID = {activity.activity_id}</td>
+      <td>Booking Id = {activity.booking_id}</td>
       <td>{activity.activity_name}</td>
       <td>{activity.activity_schedule}</td>
       <td>
-        <Link to="/cancelActivity">
-          <button className="btn btn-info">Cancel</button>
-        </Link>
+        <button onClick={() => {props.deleteBooking(activity.booking_id)}} class="btn btn-warning">Delete booking</button>
       </td>
     </tr>
   ));

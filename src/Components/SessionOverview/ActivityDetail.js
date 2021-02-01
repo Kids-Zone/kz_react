@@ -27,7 +27,7 @@ const ActivityDetail = (props) => {
     //initiate  a POST  to API endpoint
     axios({
       method: "post",
-      url: "/dev/Booking/",
+      url: "https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/Booking/",
       data: {
         user_id: user_id,
         activity_id : activity.id

@@ -73,25 +73,32 @@
 
 import axios from "axios";
 
-const Activities = [];
-
 const ActivityAPI = {
-  getActivity : (id) => {
-    return Activities.filter((activity) => {
-      return activity.title.toUpperCase() === id.toUpperCase();
-    })[0];
-  },
   getAll: () => {
-   return axios
-    .get(
-      "https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/allActivity"
-    ).then((response) => response.data)
+    return axios
+      .get(
+        "https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/allActivity"
+      )
+      .then((response) => response.data);
     // //if error, log error
     // .catch((error) => console.log("error = " + error));
   },
+  getActivity: (id) => {
+    return axios
+     .get(
+        "https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/Activity/" + id
+      )
+      .then((response) => response.data)
+      //if error, log error
+     .catch((error) => console.log("error in get activity = " + error));
+  },
+
   delete: (id) => {
-    return axios.delete("https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/Booking/" + id)
-  }
+    return axios
+    .delete(
+      "https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/Booking/" + id
+    );
+  },
 };
 
 export default ActivityAPI;

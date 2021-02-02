@@ -8,10 +8,10 @@ const Availability = () => {
       <div className="row">
         <div className="col">
           <h3 className="text-center" style={{ marginTop: "10px" }}>
-            My Planner
+            My Schedule
           </h3>
-          <Link to={`/managePlan`}>
-            <button class="btn btn-primary">Manage Plan</button>
+          <Link to={`/manageSchedule`}>
+            <button class="btn btn-primary">Manage Schedule</button>
           </Link>
         </div>
       </div>

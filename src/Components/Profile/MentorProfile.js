@@ -9,7 +9,7 @@ import {
 import { Link } from "react-router-dom";
 
 
-function Profile() {
+function MentorProfile() {
   const user =localStorage.getItem('username');
   return (
     <>
@@ -34,21 +34,34 @@ function Profile() {
           <Card>
               <Card.Img className ="profile-image" variant="top" src="https://www.zynbit.com/wp-content/uploads/2019/06/automated-scheduling-featured-image-1.jpg" />
               <Card.Body>
-              <Link to={`/createPlan/new`}>
-                <Card.Title>Plan</Card.Title>
+              <Link to={`/schedule/new`}>
+                <Card.Title>Schedule</Card.Title>
                 </Link>
-                <Card.Text>You can plan activities here</Card.Text>
+                <Card.Text>You can schedule activities</Card.Text>
+              </Card.Body>
+            </Card>
+            
+		        <Card>
+              <Card.Img variant="top" src="https://pebbledesign.com/images/insights/headings/booking-direct.png" />
+              <Card.Body>
+                  <Link to={`/availability`}>
+                <Card.Title>My Schedule</Card.Title>
+                </Link>
+                <Card.Text>
+                View all your scheduled activities
+                </Card.Text>
+               
               </Card.Body>
             </Card>
            
             <Card>
               <Card.Img className="card-img-top" variant="top" src="https://asanastatic.s3.amazonaws.com/020fe1.png" />
               <Card.Body>
-              <Link to={`/managePlan`}>
+              <Link to={`/manageSchedule`}>
                 <Card.Title>Manage</Card.Title>
                 </Link>
                 <Card.Text>
-                 Manage your plan
+                 Manage your schedule
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -63,4 +76,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default MentorProfile;

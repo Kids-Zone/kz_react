@@ -1,5 +1,4 @@
 import React, {useEffect, useState } from "react";
-import "./Mentor.css";
 import {Link} from 'react-router-dom'
 import ActivityPlanList from "./ActivityPlanList";
 import axios from "axios"
@@ -35,8 +34,8 @@ const ManageActivityPlan = () => {
           <h2 className="text-center" style={{ marginTop: "10px" }}>
             Manage activities
           </h2>
-        <Link to={`/availability`}>
-        <button className="btn btn-primary">My Planner</button>
+          <Link to={`/createPlan/new`}>
+        <button className="btn btn-primary">Plan</button>
         </Link>
         </div>
       </div>

@@ -35,7 +35,7 @@ const ActivityPlanList = (props) => {
         <td>{activity.activity_schedule}</td>
         <td><button className="btn btn-info">View</button></td>
         <td>
-          <Link to="/createPlan">
+          <Link to={`/createPlan/${activity.activity_id}`}>
         <button className="btn btn-primary">Edit</button>
         </Link>
         <button className="btn btn-info" key={activity.activity_id}

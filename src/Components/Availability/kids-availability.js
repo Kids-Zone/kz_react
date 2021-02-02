@@ -42,11 +42,11 @@ const Kidsavailability = (props) => {
   const deleteBooking = (id) => {
     console.log("Deleting " + id);
     ActivityAPI.delete(id).then(() => {
-      setBookedActivities(
-        [...bookedActivities.filter((booking) => {
+      setBookedActivities([
+        ...bookedActivities.filter((booking) => {
           return booking.id != id;
-        })]
-      );
+        }),
+      ]);
     });
   };
 
@@ -71,10 +71,16 @@ const Kidsavailability = (props) => {
         </thead>
         <tbody>
           {" "}
-          <BookingList
-            bookedActivities={bookedActivities}
-            deleteBooking={deleteBooking}
-          />
+          <div>
+            {bookedActivities ? (
+              "No bookings so far....."
+            ) : (
+              <BookingList
+                bookedActivities={bookedActivities}
+                deleteBooking={deleteBooking}
+              />
+            )}
+          </div>
         </tbody>
       </table>
       <div>

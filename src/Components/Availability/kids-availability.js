@@ -27,7 +27,7 @@ const Kidsavailability = (props) => {
       .get(
         `https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/Booking/${userId}`
       )
-      //if successful fill activities
+      //if successful fill booked activities
       .then((response) => {
         setBookedActivities(response.data);
       })
@@ -71,16 +71,14 @@ const Kidsavailability = (props) => {
         </thead>
         <tbody>
           {" "}
-          <div>
             {bookedActivities ? (
-              "No bookings so far....."
-            ) : (
               <BookingList
                 bookedActivities={bookedActivities}
                 deleteBooking={deleteBooking}
               />
-            )}
-          </div>
+            ):(
+              "No bookings so far....."
+            )  }
         </tbody>
       </table>
       <div>

@@ -63,11 +63,17 @@ const Header = () => {
 
           }
           {isAuthenticated   && (role === 'me') && (
-            <>
-              <Nav.Link componentclass={Link} href="/profile" onClick={handleClick}>
+            // <>
+            //   <Nav.Link componentclass={Link} href="/profile" onClick={handleClick}>
+            //     Profile
+            //   </Nav.Link>
+            // </>
+<>
+              <Nav.Link componentclass={Link} href="/mentorProfile" onClick={handleClick}>
                 Profile
               </Nav.Link>
-            </>
+             </>
+            
           )}
           <Nav.Link componentClass={Link} href="/about">
             About

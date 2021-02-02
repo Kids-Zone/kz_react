@@ -13,9 +13,14 @@ const Kidsavailability = (props) => {
 
   const [activities, setActivities] = useState([]);
 
+  const [loaded, isLoaded] = useState(true)
+
   useEffect(() => {
-    ActivityAPI.getAll().then((data) => setActivities(data));
-  });
+    ActivityAPI.getAll().then((data) => {
+      setActivities(data)
+      isLoaded(true)
+    });
+  },[loaded]);
 
   const { user } = useAuth0();
 
@@ -33,7 +38,7 @@ const Kidsavailability = (props) => {
       })
       //if error, log error
       .catch((error) => console.log("error = " + error));
-  }, []);
+  }, [], userId);
 
   const toggleActivityDisplay = () => {
     setDisplayActivities(!displayActivities);
@@ -42,11 +47,10 @@ const Kidsavailability = (props) => {
   const deleteBooking = (id) => {
     console.log("Deleting " + id);
     ActivityAPI.delete(id).then(() => {
-      setBookedActivities([
-        ...bookedActivities.filter((booking) => {
-          return booking.id != id;
-        }),
-      ]);
+      let filtered = bookedActivities.filter((booking) => {
+        return booking.booking_id !== id;
+      })
+      setBookedActivities([...filtered]);
     });
   };
 

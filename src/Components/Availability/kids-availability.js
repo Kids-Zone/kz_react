@@ -27,7 +27,6 @@ const Kidsavailability = (props) => {
   const userId = user && user.sub ? user.sub.split("|")[1] : "";
 
   useEffect(() => {
-    //initiate  a GET  to API endpoint
     axios
       .get(
         `https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/Booking/${userId}`

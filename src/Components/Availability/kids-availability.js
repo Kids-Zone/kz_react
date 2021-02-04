@@ -66,8 +66,8 @@ const Kidsavailability = (props) => {
         <thead>
           <tr>
             <td> </td>
-            <th scope="col">#</th>
-            <th scope="col">Booked</th>
+            <th scope="col">Reference</th>
+            <th scope="col">Activity</th>
             <th scope="col">When</th>
             <th scope="col">Amend</th>
           </tr>

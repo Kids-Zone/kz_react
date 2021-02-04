@@ -2,7 +2,7 @@ const BookingList = (props) => {
   return props.bookedActivities.map((activity) => (
     <tr>
       <th scope="row"></th>
-      <td>Booking Id = {activity.booking_id}</td>
+      <td>{activity.booking_id}</td>
       <td>{activity.activity_name}</td>
       <td>{activity.activity_schedule}</td>
       <td>

@@ -1,4 +1,4 @@
-import React ,{useEffect, useState } from "react";
+import React ,{useState } from "react";
 import { Container, Col, Row, Form, Button } from "react-bootstrap";
 import "./Mentor.css";
 import {Link} from 'react-router-dom';

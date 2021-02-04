@@ -1,13 +1,15 @@
 import Activity from "./Activity/Activity";
 
 const ActivityList = (props) => {
-    return props.activities.map((activity) => (
+    return props.activities.map((a) => (
       <Activity
-        id={activity.id}
-        title={activity.title}
-        schedule={activity.schedule}
-        maxcount={activity.maxcount}
+        id={a.activity_id}
+        title={a.activity_name}
+        schedule={a.activity_schedule}
+        maxcount={a.max_occupancy}
+        category={a.category}
       />
+      
     ));
   };
 

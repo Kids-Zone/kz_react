@@ -1,4 +1,4 @@
-const ACTIVITIES = [
+/* const ACTIVITIES = [
   {
     title: "Dance",
     summary:
@@ -10,7 +10,7 @@ const ACTIVITIES = [
     schedule: "Monday to Friday",
     maxcount: 10,
     category: "premise",
-    id: "dance",
+    id: "3",
   },
   {
     title: "Craft",
@@ -19,7 +19,7 @@ const ACTIVITIES = [
     schedule: "Monday to Friday",
     maxcount: 10,
     category: "online",
-    id: "craft",
+    id: "2",
   },
   {
     title: "Drumming",
@@ -32,7 +32,7 @@ const ACTIVITIES = [
     schedule: "Monday & Wednesday",
     maxcount: 4,
     category: "premise",
-    id: "drumming",
+    id: "3",
   },
   {
     title: "Cooking",
@@ -45,7 +45,18 @@ const ACTIVITIES = [
     schedule: "Tuesday & Thursday",
     maxcount: 6,
     category: "premise",
-    id: "cooking",
+    id: "4",
+  },
+
+  {
+    title: "Reading",
+    summary:"Come join our book club, there's never been a better time to start from the comfort of your own home!",
+    details:"On the first Tuesday of each month, we put a theme or author to a club vote and settle on a book chosen by you.",
+    quote:"Books offer the chance to explore anywhere in this universe, this is especially great at the moment.",
+    schedule: "Monday to Friday",
+    maxcount: 10,
+    category: "online",
+    id: "5",
   },
   {
     title: "Writing",
@@ -55,29 +66,39 @@ const ACTIVITIES = [
     schedule: "Monday to Friday",
     maxcount: 10,
     category: "online",
-    id: "writing",
-  },
-  {
-    title: "Reading",
-    summary:"Come join our book club, there's never been a better time to start from the comfort of your own home!",
-    details:"On the first Tuesday of each month, we put a theme or author to a club vote and settle on a book chosen by you.",
-    quote:"Books offer the chance to explore anywhere in this universe, this is especially great at the moment.",
-    schedule: "Monday to Friday",
-    maxcount: 10,
-    category: "online",
-    id: "reading",
+    id: "6",
   },
 ];
+ */
+
+import axios from "axios";
 
 const ActivityAPI = {
-  get: (id) => {
-    return ACTIVITIES.filter((activity) => {
-      return activity.id.toUpperCase() === id.toUpperCase();
-    })[0];
-  },
   getAll: () => {
-    return ACTIVITIES;
-  }
+    return axios
+      .get(
+        "https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/allActivity"
+      )
+      .then((response) => response.data);
+    // //if error, log error
+    // .catch((error) => console.log("error = " + error));
+  },
+  getActivity: (id) => {
+    return axios
+     .get(
+        "https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/Activity/" + id
+      )
+      .then((response) => response.data)
+      //if error, log error
+     .catch((error) => console.log("error in get activity = " + error));
+  },
+
+  delete: (id) => {
+    return axios
+    .delete(
+      "https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/Booking/" + id
+    );
+  },
 };
 
 export default ActivityAPI;

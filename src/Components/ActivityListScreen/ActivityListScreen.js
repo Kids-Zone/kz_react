@@ -1,11 +1,18 @@
 import "./ActivityListScreen.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import ActivityList from "./ActivityList";
 import ActivityAPI from "../../services/activity-api";
 
 const ActivityListScreen = (props) => {
-  const activities = ActivityAPI.getAll();
+
+  const[activities, setActivities] = useState([])
+  const [loaded, isLoaded] = useState(true)
+
+  useEffect(() => {
+    ActivityAPI.getAll().then((data)=>setActivities(data));
+    isLoaded(true)
+  },[loaded]);
 
   let location = useLocation();
   let categoryQuery = new URLSearchParams(useLocation().search).get("category");

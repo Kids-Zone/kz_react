@@ -1,9 +1,58 @@
-import React from "react";
-import "./kids-availability.css";
+import { useAuth0 } from "@auth0/auth0-react";
+import axios from "axios";
+import { React, useEffect, useState } from "react";
+import ActivityAPI from "../../services/activity-api";
 import ActivityList from "../ActivityListScreen/ActivityList.js";
-import ActivityAPI from "../../services/activity-api"
+import BookingList from "./BookingList";
+import "./kids-availability.css";
 
-const kidsavailability = (props) => {
+const Kidsavailability = (props) => {
+  const [bookedActivities, setBookedActivities] = useState([]);
+
+  const [displayActivities, setDisplayActivities] = useState(false);
+
+  const [activities, setActivities] = useState([]);
+
+  const [loaded, isLoaded] = useState(true)
+
+  useEffect(() => {
+    ActivityAPI.getAll().then((data) => {
+      setActivities(data)
+      isLoaded(true)
+    });
+  },[loaded]);
+
+  const { user } = useAuth0();
+
+  const userId = user && user.sub ? user.sub.split("|")[1] : "";
+
+  useEffect(() => {
+    axios
+      .get(
+        `https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/Booking/${userId}`
+      )
+      //if successful fill booked activities
+      .then((response) => {
+        setBookedActivities(response.data);
+      })
+      //if error, log error
+      .catch((error) => console.log("error = " + error));
+  }, [userId]);
+
+  const toggleActivityDisplay = () => {
+    setDisplayActivities(!displayActivities);
+  };
+
+  const deleteBooking = (id) => {
+    console.log("Deleting " + id);
+    ActivityAPI.delete(id).then(() => {
+      let filtered = bookedActivities.filter((booking) => {
+        return booking.booking_id !== id;
+      })
+      setBookedActivities([...filtered]);
+    });
+  };
+
   return (
     <div>
       <div className="row">
@@ -13,43 +62,41 @@ const kidsavailability = (props) => {
           </h2>
         </div>
       </div>
-    <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Booked</th>
-        <th scope="col">When</th>
-        <th scope="col">Amend</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Drumming</td>
-        <td>Tomorrow 4pm</td>
-        <td><button class="btn btn-primary">Rebook</button>
-        <button class="btn btn-info">Cancel</button></td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Craft</td>
-        <td>Thursday 7th 4.30pm</td>
-        <td><button class="btn btn-primary">Rebook</button>
-        <button class="btn btn-info">Cancel</button></td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Dance</td>
-        <td>Wednesday 5th 5pm</td>
-        <td><button class="btn btn-primary">Rebook</button>
-        <button class="btn btn-info">Cancel</button></td>
-      </tr>
-    </tbody>
-  </table>
-  {/* <button class="btn btn-info" onClick={()=>ActivityListScreen()}>More Activites</button> */}
-  <div className="row"><ActivityList activities={ActivityAPI.getAll()}/></div>
-  </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <td> </td>
+            <th scope="col">#</th>
+            <th scope="col">Booked</th>
+            <th scope="col">When</th>
+            <th scope="col">Amend</th>
+          </tr>
+        </thead>
+        <tbody>
+          {" "}
+            {bookedActivities ? (
+              <BookingList
+                bookedActivities={bookedActivities}
+                deleteBooking={deleteBooking}
+              />
+            ):(
+              "No bookings so far....."
+            )  }
+        </tbody>
+      </table>
+      <div>
+        <button class="btn btn-info" onClick={toggleActivityDisplay}>
+          {displayActivities ? "Hide activity list" : "Show more activities"}
+        </button>
+      </div>
+
+      <div className="showActivities">
+        <div className="row">
+          {displayActivities ? <ActivityList activities={activities} /> : ""}
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default kidsavailability;
+export default Kidsavailability;

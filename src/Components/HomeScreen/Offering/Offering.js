@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Offering(props) {
   const category = props.category;
   const type = props.type;
-
+  const role =localStorage.getItem('role') != null ? localStorage.getItem('role') : '' ;
   return (
     <section>
       {category === "online" && type === "activity" && (
@@ -32,12 +32,12 @@ function Offering(props) {
         {category === "premise" && type === "mentoring" && (
           <h4>Premise Mentoring</h4>
         )}
-        {type === "activity" &&(
+        {type === "activity" && role != 'me' && (
           <Link to={`/activities?category=`+ category}>
             <button className="button btn btn-info">Read More</button>
           </Link>
         )}
-        {type === "mentoring" && (
+        {type === "mentoring" && role != 'ch' &&(
           <Link to={`/mentoring`}>
             <button className="button btn btn-info">Read More</button>
           </Link>

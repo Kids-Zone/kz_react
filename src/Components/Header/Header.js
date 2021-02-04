@@ -36,7 +36,7 @@ const Header = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Link componentclass={Link} href="/">
+          <Nav.Link componentclass={Link} href="/" onClick={handleClick}>
             Home
           </Nav.Link>
           {!isAuthenticated && (
@@ -63,19 +63,20 @@ const Header = () => {
 
           }
           {isAuthenticated   && (role === 'me') && (
-            // <>
-            //   <Nav.Link componentclass={Link} href="/profile" onClick={handleClick}>
-            //     Profile
-            //   </Nav.Link>
-            // </>
-<>
+             <>
               <Nav.Link componentclass={Link} href="/mentorProfile" onClick={handleClick}>
                 Profile
               </Nav.Link>
              </>
-            
           )}
-          <Nav.Link componentClass={Link} href="/about">
+          {isAuthenticated   && (role === 'admin') && (
+            <>
+              <Nav.Link componentclass={Link} href="/profile" onClick={handleClick}>
+                Profile
+              </Nav.Link>
+            </> 
+          )}
+          <Nav.Link componentClass={Link} href="/about" onClick={handleClick}>
             About
           </Nav.Link>
           <AuthenticationButton />

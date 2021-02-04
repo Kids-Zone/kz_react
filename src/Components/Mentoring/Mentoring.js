@@ -64,7 +64,7 @@ const Mentoring = () => {
           {!isAuthenticated && ( <Button variant="success" className="button btn btn-info"  onClick={() => loginWithRedirect()}>
               Join Us
             </Button>)}
-           {isAuthenticated && (<Link to={`/profile`}> <Button variant="success" className="button btn btn-info" >
+           {isAuthenticated && (<Link to={`/mentorProfile`}> <Button variant="success" className="button btn btn-info" >
               Join Us
             </Button></Link>)}
          

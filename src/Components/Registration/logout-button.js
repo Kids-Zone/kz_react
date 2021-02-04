@@ -3,14 +3,16 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 const LogoutButton = () => {
   const { logout } = useAuth0();
+  const handleClick = ()=>{
+    localStorage.clear();
+    logout({    
+      returnTo: window.location.origin,
+    })
+  }
   return (
     <button
       className="button btn btn-info btn-danger"
-      onClick={() =>
-        logout({
-          returnTo: window.location.origin,
-        })
-      }
+      onClick={handleClick}
     >
       Log Out
     </button>

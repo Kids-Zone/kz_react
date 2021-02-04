@@ -12,7 +12,7 @@ const ActivityDetail = (props) => {
   useEffect(() => { 
     axios
       .get(
-        "https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/Activity/1" //+ activityId        
+        `https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/ActivityByName/${activityTitle}`
       )
       //if successful get activity details
       .then((response) => {

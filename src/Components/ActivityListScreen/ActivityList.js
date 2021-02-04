@@ -7,6 +7,7 @@ const ActivityList = (props) => {
         title={a.activity_name}
         schedule={a.activity_schedule}
         maxcount={a.max_occupancy}
+        category={a.category}
       />
       
     ));

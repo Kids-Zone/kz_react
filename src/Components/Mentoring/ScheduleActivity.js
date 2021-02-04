@@ -6,7 +6,6 @@ import axios from "axios";
 const ScheduleActivity = (props) => {
   const activity_Id=props.match.params.id;
   const [activitySchedule ,setActivitySchedule] =useState([]);  
-  const userId= '6005665ed93fdd006facc1c9';
   const initialFormData = Object.freeze({
     // auth0Id: localStorage.getItem('userId'),
     user_id: '6005665ed93fdd006facc1c9',
@@ -31,7 +30,7 @@ const ScheduleActivity = (props) => {
 
   useEffect(() => {
     //initiate  a GET  to API endpoint
-    if(activity_Id !=null && activity_Id != "new"){
+    if(activity_Id !== null && activity_Id !== "new"){
     axios
       .get(
         `https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/Activity/${activity_Id}`
@@ -69,6 +68,7 @@ const ScheduleActivity = (props) => {
         .then((response) => {
           console.log(response.data)
           alert('Activity scheduled successfully ' );
+
         })
         //if error, log error
         .catch((error) => console.log("error = " + error));
@@ -117,7 +117,7 @@ const ScheduleActivity = (props) => {
                  <option>Choose...</option>
                  {activitySchedule.map((activity) => (
 
-                      <option value={activity.activity_id}>{activity.activity_name}</option>
+                      <option value={activity.activity_id} key={activity.activity_id}>{activity.activity_name}</option>
 
                       ))
                 
@@ -187,7 +187,6 @@ const ScheduleActivity = (props) => {
               </Form.Row>
               </Form.Group>
               <Button class="button btn btn-primary" onClick = {handleSave}>Save</Button>
-              <Button class="button btn btn-primary" onClick = {handleEdit}>Update</Button>
               <Link to={`/availability`}>
               <Button class="button btn btn-info">My Schedule</Button>
               </Link>

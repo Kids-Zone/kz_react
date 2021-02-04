@@ -32,12 +32,12 @@ function Offering(props) {
         {category === "premise" && type === "mentoring" && (
           <h4>Premise Mentoring</h4>
         )}
-        {type === "activity" && role != 'me' && (
+        {type === "activity" && role !== 'me' && (
           <Link to={`/activities?category=`+ category}>
             <button className="button btn btn-info">Read More</button>
           </Link>
         )}
-        {type === "mentoring" && role != 'ch' &&(
+        {type === "mentoring" && role !== 'ch' &&(
           <Link to={`/mentoring`}>
             <button className="button btn btn-info">Read More</button>
           </Link>

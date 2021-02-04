@@ -61,7 +61,11 @@ const ManageSchedule = () => {
       <ScheduledActivityList activitySchedule = {activitySchedule} manageSchedule ={manageSchedule}/>
       { access === 'show' && (
         <>
-        <tr>View participants here</tr>
+        <tr>{participants !=null ? participants.map((participant) => (
+
+              participant.forename + ' ' + participant.surname
+
+              )): 'Participant List'}</tr>
         </>
       )} 
     </tbody>

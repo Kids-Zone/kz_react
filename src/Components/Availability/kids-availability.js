@@ -37,7 +37,7 @@ const Kidsavailability = (props) => {
       })
       //if error, log error
       .catch((error) => console.log("error = " + error));
-  }, [], userId);
+  }, [userId]);
 
   const toggleActivityDisplay = () => {
     setDisplayActivities(!displayActivities);

@@ -20,7 +20,7 @@ const ActivityDetail = (props) => {
       })
       .catch((error) => console.log("error = " + error));
       
-  }, []);
+  }, [activityTitle], );
 
 /*   useEffect(() => {
     ActivityAPI.getActivity(activityId).then((data) => setActivity(data));

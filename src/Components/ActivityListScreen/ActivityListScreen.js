@@ -7,10 +7,12 @@ import ActivityAPI from "../../services/activity-api";
 const ActivityListScreen = (props) => {
 
   const[activities, setActivities] = useState([])
+  const [loaded, isLoaded] = useState(true)
 
   useEffect(() => {
     ActivityAPI.getAll().then((data)=>setActivities(data));
-  });
+    isLoaded(true)
+  },[loaded]);
 
   let location = useLocation();
   let categoryQuery = new URLSearchParams(useLocation().search).get("category");

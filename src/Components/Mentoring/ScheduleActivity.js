@@ -7,9 +7,7 @@ const ScheduleActivity = (props) => {
   const activity_Id=props.match.params.id;
   const [activitySchedule ,setActivitySchedule] =useState([]);  
   const initialFormData = Object.freeze({
-    // auth0Id: localStorage.getItem('userId'),
-    user_id: '6005665ed93fdd006facc1c9',
-    
+    user_id: localStorage.getItem('userId'),   
   });
   const [formData, updateFormData] = useState(initialFormData);
 

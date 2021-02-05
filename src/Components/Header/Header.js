@@ -14,8 +14,7 @@ const Header = () => {
       ? myContext.userData.role
       : localStorage.getItem("role");
 
-  const { user } = useAuth0();
-  const userId = user && user.sub ? user.sub.split("|")[1] : "";
+  const userId = myContext.user !==null && myContext.user.sub !==null ? myContext.user.sub.split("|")[1] : "";
 
   //created this function to store the user data in local storage
   const handleClick = () => {
@@ -66,19 +65,6 @@ const Header = () => {
               </Nav.Link>
             </>
           )}
-          {isAuthenticated && (role === 'ch') &&
-            (
-              <>
-                <Nav.Link componentclass={Link} href="/activities" onClick={handleClick}>
-                  Activities
-                </Nav.Link>
-                <Nav.Link componentclass={Link} href="/kidsavailability" onClick={handleClick}>
-                  Profile
-                </Nav.Link>
-                </>
-            )
-
-          }
           {isAuthenticated   && (role === 'me') && (
              <>
               <Nav.Link componentclass={Link} href="/mentorProfile" onClick={handleClick}>

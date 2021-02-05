@@ -59,7 +59,11 @@ const Header = () => {
               >
                 Activities
               </Nav.Link>
-              <Nav.Link href="/kidsavailability" onClick={handleClick}>
+              <Nav.Link
+                componentclass={Link}
+                href="/kidsavailability"
+                onClick={handleClick}
+              >
                 Profile
               </Nav.Link>
             </>

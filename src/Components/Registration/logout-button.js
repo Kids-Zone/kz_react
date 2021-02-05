@@ -6,11 +6,12 @@ const LogoutButton = () => {
   return (
     <button
       className="button btn btn-info"
-      onClick={() =>
+      onClick={(e) =>{
+        e.preventDefault()
         logout({
           returnTo: window.location.origin,
         })
-      }
+      }}
     >
       Log Out
     </button>

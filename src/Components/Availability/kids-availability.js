@@ -58,9 +58,12 @@ const Kidsavailability = (props) => {
       <div className="row">
         <div className="col">
           <h2 className="text-center" style={{ marginTop: "10px" }}>
-            My booked activities
+            What I've booked 
           </h2>
-        </div>
+        <button class="btn btn-info" onClick={toggleActivityDisplay}>
+          {displayActivities ? "Show less" : "More Activities"}
+        </button>
+      </div>
       </div>
       <table class="table table-striped">
         <thead>
@@ -84,12 +87,6 @@ const Kidsavailability = (props) => {
             )  }
         </tbody>
       </table>
-      <div>
-        <button class="btn btn-info" onClick={toggleActivityDisplay}>
-          {displayActivities ? "Hide activity list" : "Show more activities"}
-        </button>
-      </div>
-
       <div className="showActivities">
         <div className="row">
           {displayActivities ? <ActivityList activities={activities} /> : ""}

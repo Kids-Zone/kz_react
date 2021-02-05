@@ -5,14 +5,13 @@ import ActivityList from "./ActivityList";
 import ActivityAPI from "../../services/activity-api";
 
 const ActivityListScreen = (props) => {
-
-  const[activities, setActivities] = useState([])
-  const [loaded, isLoaded] = useState(true)
+  const [activities, setActivities] = useState([]);
+  const [loaded, isLoaded] = useState(true);
 
   useEffect(() => {
-    ActivityAPI.getAll().then((data)=>setActivities(data));
-    isLoaded(true)
-  },[loaded]);
+    ActivityAPI.getAll().then((data) => setActivities(data));
+    isLoaded(true);
+  }, [loaded]);
 
   let location = useLocation();
   let categoryQuery = new URLSearchParams(useLocation().search).get("category");
@@ -45,27 +44,30 @@ const ActivityListScreen = (props) => {
         <section class="Search_section">
           <div className="row">
             <div className="col">
-              <h3 className="text-center">Welcome to Activity Area</h3>
+              <h3 className="text-center">Check out our activities</h3>
             </div>
           </div>
-               <b>Category </b>
+          <b>Search </b>
           <select
             onChange={(e) => {
               updateSearch(e.target.value);
             }}
             defaultValue={category}
           >
-            <option value="">All</option>
+            <option value="">Show All</option>
             <option value="online">Online</option>
-            <option value="premise">Premise</option>
-          </select>
+            <option value="premise">At the club</option>
+          </select>         
         </section>
       </div>
-      <div className="row"><ActivityList activities={filteredActivities}/></div>
+      <div>
+        <p></p>
+      </div>
+      <div className="row">
+        <ActivityList activities={filteredActivities} />
+      </div>
     </main>
   );
 };
-
-
 
 export default ActivityListScreen;

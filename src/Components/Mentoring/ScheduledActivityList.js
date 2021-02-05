@@ -1,6 +1,5 @@
 import {Link} from 'react-router-dom'
 import axios from "axios"
-import { useState } from 'react';
 
 const ScheduledActivityList = (props) => {
   const userId = "6005665ed93fdd006facc1c9";
@@ -11,10 +10,8 @@ const ScheduledActivityList = (props) => {
       const str =  val.split('@')
       let schedule_Id = str[0];
       let isActive = str[1];
-      let status;
-      {
-      status = isActive === '0' ? true : false
-      }
+      let status = isActive === '0' ? true : false
+      
       const data ={"isActive": status}
 
       axios({
@@ -32,7 +29,7 @@ const ScheduledActivityList = (props) => {
             alert('Schedule cancelled successfully' );
           }
           
-          axios .get(
+          axios.get(
             `https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/schedule/${userId}`
           )
           //if successful print to log for now
@@ -54,7 +51,7 @@ const handleView = (e) => {
     props.manageSchedule.setAccess('hide');
   }
   axios.get(
-    `https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/schedule/${schedule_id}`
+    `https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/participants/${schedule_id}`
     )
     //if successful print to log for now
     .then((response) => {

@@ -14,8 +14,7 @@ const Header = () => {
       ? myContext.userData.role
       : localStorage.getItem("role");
 
-  const { user } = useAuth0();
-  const userId = user && user.sub ? user.sub.split("|")[1] : "";
+  const userId = myContext.user !==null && myContext.user.sub !==null ? myContext.user.sub.split("|")[1] : "";
 
   //created this function to store the user data in local storage
   const handleClick = () => {
@@ -41,7 +40,9 @@ const Header = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link href="/" onClick={handleClick}>
+            Home
+          </Nav.Link>
           {!isAuthenticated && (
             <>
               <Nav.Link componentclass={Link} href="/activities">
@@ -68,18 +69,30 @@ const Header = () => {
               </Nav.Link>
             </>
           )}
-          {isAuthenticated && role === "me" && (
-            <>
-              <Nav.Link
-                componentclass={Link}
-                href="/mentorProfile"
-                onClick={handleClick}
-              >
+          {isAuthenticated   && (role === 'me') && (
+             <>
+              <Nav.Link 
+                componentclass={Link} 
+                href="/mentorProfile" 
+                onClick={handleClick}>
                 Profile
               </Nav.Link>
-            </>
+             </>
           )}
-          <Nav.Link componentclass={Link} href="/about">
+          {isAuthenticated   && (role === 'admin') && (
+            <>
+              <Nav.Link 
+                componentclass={Link} 
+                href="/profile" 
+                onClick={handleClick}>
+                Profile
+              </Nav.Link>
+            </> 
+          )}
+          <Nav.Link 
+            componentClass={Link} 
+            href="/about"
+            onClick={handleClick}>
             About
           </Nav.Link>
         </Nav>

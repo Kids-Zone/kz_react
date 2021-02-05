@@ -14,7 +14,7 @@ const CreateActivityPlan = (props) => {
 
   useEffect(() => {
     //initiate  a GET  to API endpoint
-    if(activity_Id !=null && activity_Id != "new"){
+    if(activity_Id !==null && activity_Id !== "new"){
     axios
       .get(
         `https://k2q4xg1r4e.execute-api.eu-west-2.amazonaws.com/dev/Activity/${activity_Id}`

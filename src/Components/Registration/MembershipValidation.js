@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { useContext} from 'react';
+import AppContext from '../../auth/AppContext';
 
 export default class MembershipValidation extends Component {
+
   render() {
     return (
       <div className="container-fluid">
@@ -78,7 +81,7 @@ export default class MembershipValidation extends Component {
         </div>
         <div className="row">
           <button className="button btn btn-info">Save</button>
-          <Link to={`/profile`}>
+          <Link to={`/mentorProfile`}>
           <button className="button btn btn-info">Proceed</button>
           </Link>
         </div>

@@ -2,6 +2,7 @@ import React ,{useEffect, useState } from "react";
 import { Container, Col, Row, Form, Button } from "react-bootstrap";
 import {Link} from 'react-router-dom';
 import axios from "axios";
+import "./Mentor.css";
 
 const ScheduleActivity = (props) => {
   const activity_Id=props.match.params.id;
@@ -103,7 +104,7 @@ const ScheduleActivity = (props) => {
           <Col>
             <h2>Schedule Activity</h2>
             <br></br>
-            <Form>
+            <Form className = "schedule-form">
               <Form.Group>
              
               <Form.Row>

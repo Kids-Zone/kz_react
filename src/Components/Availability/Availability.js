@@ -22,7 +22,24 @@ const Availability = () => {
               <i className="fa fa-calendar-o d-none"></i>
               <div className="row date-cont date-sticky">
                 <div className="col">
+                  <p className="text-center text-white mb-2 mt-2" id="Month"></p>
+                  <p className="date">Feb</p>
+                </div>
+                <div className="col">
+                </div>
+                <div className="col">
+                </div>
+                <div className="col">
+                </div>
+                <div className="col">
+                </div>
+                <div className="col">
+                </div>
+                <div className="col">
+                </div>
+                <div className="col">
                   <p className="text-center text-white mb-2 mt-2" id="year"></p>
+                  <p className="date">2021</p>
                 </div>
               </div>
               <div className="row d-none d-md-flex seven-cols days-sticky">
@@ -67,6 +84,7 @@ const Availability = () => {
                 </div>
                 <div className="col-md-1 day bg-events">
                   <p className="date">5</p>
+                  
                 </div>
                 <div className="col-md-1 day bg-events">
                   <p className="date">6</p>
@@ -82,7 +100,7 @@ const Availability = () => {
                     data-bs-tooltip=""
                     title="Click for more info"
                   >
-                    Cooking Class 12:00 PM
+                    Drumming Class
                   </p>
                 </div>
                 <div className="col-md-1 day bg-events">
@@ -108,12 +126,12 @@ const Availability = () => {
                 </div>
                 <div className="col-md-1 day bg-events">
                   <p className="date">16</p>
+                  <p className="text-center text-white bg-success event event-spec">
+                   Writing Class
+                  </p>
                 </div>
                 <div className="col-md-1 day bg-events">
                   <p className="date">17</p>
-                  <p className="text-center text-white bg-success event event-spec">
-                    English Reading Class 11:00 AM
-                  </p>
                 </div>
                 <div className="col-md-1 day bg-events">
                   <p className="date">18</p>
@@ -123,6 +141,9 @@ const Availability = () => {
                 </div>
                 <div className="col-md-1 day bg-events">
                   <p className="text-nowrap date">20</p>
+                  <p className="text-center text-white bg-success event event-spec">
+                   Reading Class
+                  </p>
                 </div>
                 <div className="col-md-1 day bg-events">
                   <p className="date">21</p>
@@ -141,6 +162,14 @@ const Availability = () => {
                 </div>
                 <div className="col-md-1 day bg-events">
                   <p className="date">26</p>
+                  <p
+                    className="text-center text-white bg-primary event"
+                    data-toggle="tooltip"
+                    data-bs-tooltip=""
+                    title="Click for more info"
+                  >
+                    Cooking Class
+                  </p>
                 </div>
                 <div className="col-md-1 day bg-events">
                   <p className="date">27</p>

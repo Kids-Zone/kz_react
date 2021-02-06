@@ -1,0 +1,13 @@
+.header-row {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: solid lightgray 2px;
+    font-weight: bold;
+}
+
+@media (max-width: 576px) {
+    .activity-row{
+        margin-top: 10px;
+        border-bottom: solid lightgray 1px;    
+    }
+}

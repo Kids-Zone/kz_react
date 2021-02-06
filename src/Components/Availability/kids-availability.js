@@ -13,14 +13,14 @@ const Kidsavailability = (props) => {
 
   const [activities, setActivities] = useState([]);
 
-  const [loaded, isLoaded] = useState(true)
+  const [loaded, isLoaded] = useState(true);
 
   useEffect(() => {
     ActivityAPI.getAll().then((data) => {
-      setActivities(data)
-      isLoaded(true)
+      setActivities(data);
+      isLoaded(true);
     });
-  },[loaded]);
+  }, [loaded]);
 
   const { user } = useAuth0();
 
@@ -48,7 +48,7 @@ const Kidsavailability = (props) => {
     ActivityAPI.delete(id).then(() => {
       let filtered = bookedActivities.filter((booking) => {
         return booking.booking_id !== id;
-      })
+      });
       setBookedActivities([...filtered]);
     });
   };
@@ -58,35 +58,33 @@ const Kidsavailability = (props) => {
       <div className="row">
         <div className="col">
           <h2 className="text-center" style={{ marginTop: "10px" }}>
-            What I've booked 
+            What I've booked
           </h2>
-        <button class="btn btn-info" onClick={toggleActivityDisplay}>
-          {displayActivities ? "Show less" : "More Activities"}
-        </button>
+          <button class="btn btn-info" onClick={toggleActivityDisplay}>
+            {displayActivities ? "Show less" : "More Activities"}
+          </button>
+        </div>
       </div>
-      </div>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <td> </td>
-            <th scope="col">Reference</th>
-            <th scope="col">Activity</th>
-            <th scope="col">When</th>
-            <th scope="col">Amend</th>
-          </tr>
-        </thead>
-        <tbody>
+
+          <div class="container">
+            <div class="row header-row">
+              <div class="col">Reference</div>
+              <div class="col">Activity</div>
+              <div class="col">When</div>
+              <div class="col-sm"></div>
+            </div>
+          </div>
+
           {" "}
-            {bookedActivities ? (
-              <BookingList
-                bookedActivities={bookedActivities}
-                deleteBooking={deleteBooking}
-              />
-            ):(
-              "No bookings so far....."
-            )  }
-        </tbody>
-      </table>
+          {bookedActivities ? (
+            <BookingList
+              bookedActivities={bookedActivities}
+              deleteBooking={deleteBooking}
+            />
+          ) : (
+            "No bookings so far....."
+          )}
+
       <div className="showActivities">
         <div className="row">
           {displayActivities ? <ActivityList activities={activities} /> : ""}

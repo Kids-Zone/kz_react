@@ -2,10 +2,10 @@
 This project was created by the Tech Returners, as a tech for good application.
 
 # It was created using 
- React
- Bootstrap
- JavaScript
- Axios
+ * React
+ * Bootstrap
+ * JavaScript
+ * Axios
 
 In the project directory, you can run:
 

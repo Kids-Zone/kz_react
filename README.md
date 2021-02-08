@@ -1,5 +1,5 @@
 # Getting Started with KidsZone
-This project was created by the Tech Returners, as a tech for good application.
+This project was created as part of our project work during Tech Returners programme, it is a tech for good application.
 
 # It was created using 
  * React

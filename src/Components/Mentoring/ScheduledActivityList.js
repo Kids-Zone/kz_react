@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom'
 import axios from "axios"
 
 const ScheduledActivityList = (props) => {
-  const userId = "6005665ed93fdd006facc1c9";
+  const userId =localStorage.getItem('userId');
   
   const handleCancel = (e) => {
       //initiate  a DELETE  to API endpoint
@@ -81,7 +81,7 @@ const handleView = (e) => {
         {schedule.isActive === 0 && (
           <>
           <button className="btn btn-info" key={schedule.schedule_id}
-          value={schedule.schedule_id + "@" + schedule.isActive}  onClick = {handleCancel}>Re-Schedule</button>
+          value={schedule.schedule_id + "@" + schedule.isActive}  onClick = {handleCancel}>Publish</button>
           </>
           )}
           {schedule.isActive === 1 && (

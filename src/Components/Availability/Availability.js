@@ -1,29 +1,35 @@
 import React from "react";
 import "./Availability.css";
 import { Link } from "react-router-dom";
-
+import {
+  Container,
+} from "react-bootstrap";
 const Availability = () => {
   return (
     <>
-      <div className="row">
-        <div className="col">
-          <h3 className="text-center" style={{ marginTop: "10px" }}>
-            My Schedule
-          </h3>
-          <Link to={`/manageSchedule`}>
-            <button class="btn btn-primary">Manage Schedule</button>
-          </Link>
-        </div>
-      </div>
-      <div style={{ marginTtop: "10px" }}>
-        <div className="container" style={{ marginBottom: "11px" }}>
-          <div className="mt-5 mb-5">
+    <Container>
+        
+        <div className="row banner">
+            <h3>My Schedule</h3>
+          </div> 
+        <Link to={`/schedule/new`}>
+        <button className="btn btn-primary">Schedule activity</button>
+        </Link>
+        <Link to={`/manageSchedule`}>
+        <button className="btn btn-primary">Manage Schedule</button>
+        </Link>
+      </Container>
+      <Container>
+      
+      {/* <div >
+        <div className="container">
+          <div className="mt-5 mb-5"> */}
             <div className="container" id="cal">
               <i className="fa fa-calendar-o d-none"></i>
               <div className="row date-cont date-sticky">
                 <div className="col">
                   <p className="text-center text-white mb-2 mt-2" id="Month"></p>
-                  <p className="date">Feb</p>
+                  <p className="date">Apr</p>
                 </div>
                 <div className="col">
                 </div>
@@ -188,9 +194,10 @@ const Availability = () => {
                 </div>
               </div>
             </div>
-          </div>
+          {/* </div>
         </div>
-      </div>
+      </div> */}
+      </Container>
     </>
   );
 };

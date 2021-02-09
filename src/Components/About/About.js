@@ -8,6 +8,7 @@ import {
 import { Link } from "react-router-dom";
 
 function About() {
+  const role =localStorage.getItem('role') != null ? localStorage.getItem('role') : '' ;
   return (
     <div className="container">
       <div className="banner">
@@ -46,9 +47,11 @@ function About() {
           <Card>
               <Card.Img className ="profile-image online-dance-img" variant="top"  />
               <Card.Body>
+              {role !== 'me' && (
               <Link to={`/activities?category=online`}>
               <button className="button btn btn-info">Read More</button>
                 </Link>
+              )}
                 <Card.Text>You can view all online activities here</Card.Text>
               </Card.Body>
             </Card>
@@ -56,9 +59,11 @@ function About() {
 		        <Card>
               <Card.Img className ="profile-image premise-drummer-img" variant="top"  />
               <Card.Body>
+              {role !== 'me' && (
               <Link to={`/activities?category=premise`}>
               <button className="button btn btn-info">Read More</button>
                 </Link>
+              )}
                 <Card.Text>
                 You can view all premise activities here
                 </Card.Text>
@@ -91,9 +96,11 @@ function About() {
           <Card>
               <Card.Img className ="profile-image mentor-img" variant="top"  />
               <Card.Body>
+              {role !== 'ch' && (
               <Link to={`/mentoring`}>
                 <button className="button btn btn-info">Read More</button>
                 </Link>
+              )}
                 <Card.Text>You can explore mentoring options here</Card.Text>
               </Card.Body>
             </Card>

@@ -50,10 +50,10 @@
     color: #167bff;
   }
 
-  .label{
-   
-      text-align: left;
-      margin-left :400px;
+  .form-label{
+      max-width: 95px;
+      text-emphasis: wrap;
+      margin-left :200px;
   }
 
   .form-group{

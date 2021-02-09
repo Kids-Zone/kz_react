@@ -5,6 +5,9 @@ import ActivityAPI from "../../services/activity-api";
 import ActivityList from "../ActivityListScreen/ActivityList.js";
 import BookingList from "./BookingList";
 import "./kids-availability.css";
+import {
+  Container,
+} from "react-bootstrap";
 
 const Kidsavailability = (props) => {
   const [bookedActivities, setBookedActivities] = useState([]);
@@ -57,7 +60,20 @@ const Kidsavailability = (props) => {
 
   return (
     <div>
-      <div className="row">
+       <Container>
+        
+        <div className="row banner">
+            <h3>Welcome! {nickname}</h3>
+          </div>
+          <div >
+            <br/>
+            <p>Your list of booked activities</p>
+          </div>
+          <button class="btn btn-info" onClick={toggleActivityDisplay}>
+            {displayActivities ? "Show less" : "More Activities"}
+          </button>
+      </Container>
+      {/* <div className="row">
         <div className="col">
           <h2 className="text-center" style={{ marginTop: "10px" }}>
             Hi {nickname} here's your classes
@@ -66,7 +82,7 @@ const Kidsavailability = (props) => {
             {displayActivities ? "Show less" : "More Activities"}
           </button>
         </div>
-      </div>
+      </div> */}
 
           <div class="container">
             <div class="row header-row">

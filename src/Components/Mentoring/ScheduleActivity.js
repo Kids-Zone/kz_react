@@ -98,12 +98,17 @@ const ScheduleActivity = (props) => {
 
   return (
     <>
-  
+      <Container>
+        
+        <div className="row banner">
+            <h3>Schedule Activity</h3>
+          </div>
+      </Container>
+      <Container></Container>
       <Container>
         <Row>
           <Col>
-            <h2>Schedule Activity</h2>
-            <br></br>
+          <br></br>
             <Form className = "schedule-form">
               <Form.Group>
              

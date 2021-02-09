@@ -22,7 +22,7 @@ function MentorProfile() {
           
         </Jumbotron> */}
         
-        <div className="banner">
+        <div className="row banner">
             <h3>Welcome! { user }</h3>
           </div>
       </Container>

@@ -3,10 +3,15 @@ import "./Mentor.css";
 import {Link} from 'react-router-dom'
 import ScheduledActivityList from "./ScheduledActivityList"
 import axios from "axios"
+import {
+  Container,
+} from "react-bootstrap";
+
 
 const ManageSchedule = () => {
   const [activitySchedule ,setActivitySchedule] =useState([]);  
-  const userId = "6005665ed93fdd006facc1c9";
+
+  const userId =localStorage.getItem('userId');
   const [participants,setParticipants] =useState(null);
   const [access,setAccess] =useState('hide'); 
   const manageSchedule ={
@@ -34,17 +39,21 @@ const ManageSchedule = () => {
   }, []);
   
   return (
-    <div>
-      <div className="row">
-        <div className="col">
-          <h2 className="text-center" style={{ marginTop: "10px" }}>
-            Manage Schedule
-          </h2>
-        <Link to={`/availability`}>
+    <>
+    <Container>
+        
+        <div className="row banner">
+            <h3>Manage Schedule</h3>
+          </div>
+          <Link to={`/availability`}>
         <button className="btn btn-primary">My Schedule</button>
         </Link>
-        </div>
-      </div>
+        <Link to={`/schedule/new`}>
+        <button className="btn btn-primary">Schedule activity</button>
+        </Link>
+      </Container>
+      <Container>
+    <div>
     <table className="table table-striped">
     <thead>
       <tr>
@@ -71,6 +80,8 @@ const ManageSchedule = () => {
     </tbody>
   </table>
   </div>
+  </Container>
+  </>
   );
 };
 

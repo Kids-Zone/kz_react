@@ -14,13 +14,17 @@ function MentorProfile() {
   return (
     <>
       <Container>
-        <Jumbotron
+        {/* <Jumbotron
           style={{ height: "2px" , backgroundColor : "rgb(196, 180, 37)"}}
-          className="jumbotrona text-light "
+          className="banner jumbotrona text-light "
         >
           <h3>Welcome! { user} </h3>
           
-        </Jumbotron>
+        </Jumbotron> */}
+        
+        <div className="banner">
+            <h3>Welcome! { user }</h3>
+          </div>
       </Container>
           <Container className={"mb-1"}>
           <p>

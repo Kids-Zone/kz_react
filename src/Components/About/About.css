@@ -2,6 +2,8 @@
   background-color :rgb(196, 180, 37); 
   /* background-color:rgba(52, 0, 134, 0.85); */
   color: whiteSmoke;
+  height:55px;
+  padding: 10px;
 }
 
 .content {

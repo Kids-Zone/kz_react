@@ -19,18 +19,23 @@ const Mentoring = () => {
   return (
     <>
       <Container>
-        <Jumbotron
-          style={{ height: "30vh" , backgroundColor : "rgb(196, 180, 37)"}}
-          className="jumbotrona text-light "
+        {/* <Jumbotron
+          style={{ height: "0vh" , backgroundColor : "rgb(196, 180, 37)"}}
+          className="jumbotron text-light "
         >
-          <h1>Join our community and teach brilliant kids</h1>
+          <h2>Join our community and teach brilliant kids</h2>
 
           {/* <p>
             All teachers will be satisfied with our club educational
             environment, and most of our teacher grow their skill by teaching
             our club kids.
           </p> */}
-        </Jumbotron>
+        {/* </Jumbotron> */} 
+        <div className="banner">
+        <h3>Join our community and teach brilliant kids</h3>
+
+        </div>
+
       </Container>
       <Container className={"mb-1"}>
         <Row>

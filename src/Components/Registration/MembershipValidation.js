@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { useContext} from 'react';
 import AppContext from '../../auth/AppContext';
+import "./MembershipValidation.css";
 
 export default class MembershipValidation extends Component {
 
   render() {
     return (
-      <div className="container-fluid">
+      <form className="container">
         <div className="banner">
           <h3>Membership Rules</h3>
         </div>
@@ -31,7 +32,7 @@ export default class MembershipValidation extends Component {
           </p>
         </div>
 
-        <form className="container-fluid">
+       
           <div className="banner">
             <h3>Upload Documents</h3>
           </div>
@@ -54,7 +55,7 @@ export default class MembershipValidation extends Component {
               <input type="file" />
             </p>
           </div>
-        </form>
+        
         <div className="banner">
           <h3>Privacy Policy</h3>
         </div>
@@ -79,13 +80,13 @@ export default class MembershipValidation extends Component {
             interview to discuss your mentoring opportunities.
           </p>
         </div>
-        <div className="row">
-          <button className="button btn btn-info">Save</button>
+        <div className="validation-button row">
+          <button className="col button btn btn-info">Save</button>
           <Link to={`/mentorProfile`}>
-          <button className="button btn btn-info">Proceed</button>
+          <button className="col button btn btn-info" disabled>Proceed</button>
           </Link>
         </div>
-      </div>
+        </form>
     );
   }
 }

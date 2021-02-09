@@ -26,6 +26,8 @@ const Kidsavailability = (props) => {
 
   const userId = user && user.sub ? user.sub.split("|")[1] : "";
 
+  const nickname = user.nickname;
+
   useEffect(() => {
     axios
       .get(
@@ -58,7 +60,7 @@ const Kidsavailability = (props) => {
       <div className="row">
         <div className="col">
           <h2 className="text-center" style={{ marginTop: "10px" }}>
-            What I've booked
+            Hi {nickname} here's your classes
           </h2>
           <button class="btn btn-info" onClick={toggleActivityDisplay}>
             {displayActivities ? "Show less" : "More Activities"}
